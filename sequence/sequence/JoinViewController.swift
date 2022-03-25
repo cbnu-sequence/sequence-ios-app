@@ -16,7 +16,13 @@ class JoinViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        pwcheckTextField.delegate = self
+        
+        pwcheckLabel.text = ""
         
     }
     
@@ -35,6 +41,8 @@ extension JoinViewController: UITextFieldDelegate {
             pwcheckLabel.text = ""
             return
         }
+        
+        print(password,passwordCheck)
         
         if password == passwordCheck {
             pwcheckLabel.textColor = .green
@@ -70,7 +78,7 @@ extension JoinViewController: UITextFieldDelegate {
                       let passwordCheckBefore = pwcheckTextField.text else {
                     return true
                 }
-                let passwordCheck = string.isEmpty ? passwordCheckBefore[0..<(passwordCheckBefore.count - 1)] : passwordCheckBefore + string
+                let passwordCheck = string.isEmpty ? passwordCheckBefore : passwordCheckBefore + string
                 setLabelPasswordConfirm(password, passwordCheck)
                 
             }
@@ -78,25 +86,5 @@ extension JoinViewController: UITextFieldDelegate {
         }
     }
 
-extension String {
-    func index(from: Int) -> Index {
-        return self.index(startIndex, offsetBy: from)
-    }
 
-    func substring(from: Int) -> String {
-        let fromIndex = index(from: from)
-        return String(self[fromIndex...])
-    }
-
-    func substring(to: Int) -> String {
-        let toIndex = index(from: to)
-        return String(self[..<toIndex])
-    }
-
-    func substring(with r: Range<Int>) -> String {
-        let startIndex = index(from: r.lowerBound)
-        let endIndex = index(from: r.upperBound)
-        return String(self[startIndex..<endIndex])
-    }
-}
 
