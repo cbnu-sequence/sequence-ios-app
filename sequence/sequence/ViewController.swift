@@ -6,13 +6,14 @@
 //
 
 import UIKit
+import KakaoSDKAuth
+
 
 class ViewController: UIViewController {
     
     
     @IBOutlet weak var textfieldID: UITextField!
-    
-    @IBOutlet weak var texifieldPW: UITextField!
+    @IBOutlet weak var textfieldPW: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,18 +22,14 @@ class ViewController: UIViewController {
 
     @IBAction func onBtnLogin(_ sender: UIButton) {
         
-        if let textID = textfieldID.text, let textPW = texifieldPW.text {
-            
-            if textID.count < 3 || textPW.count < 3 {
-                print("아이디나 암호의 길이를 확인해주세요.")
-                return
-            }
-        }
     }
     
     
-    @IBAction func onBtnJoin(_ sender: UIButton) {
+    @IBAction func onBtnKakaoLogin(_ sender: UIButton) {
     }
     
 }
+
+    
+
 

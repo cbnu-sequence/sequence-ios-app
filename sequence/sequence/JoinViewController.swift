@@ -4,11 +4,14 @@
 
 
 import UIKit
+import KakaoSDKAuth
 
 class JoinViewController: UIViewController {
     
     
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var PhoneNumTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var pwcheckTextField: UITextField!
 
@@ -17,8 +20,9 @@ class JoinViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         emailTextField.delegate = self
+        nameTextField.delegate = self
+        PhoneNumTextField.delegate = self
         passwordTextField.delegate = self
         pwcheckTextField.delegate = self
         
@@ -26,11 +30,13 @@ class JoinViewController: UIViewController {
         
     }
     
-
     @IBAction func onBtnJoin(_ sender: UIButton) {
+        
     }
     
-
+    @IBAction func onBtnKakaoLogin(_ sender: UIButton) {
+    }
+    
 }
 
 extension JoinViewController: UITextFieldDelegate {
@@ -42,7 +48,6 @@ extension JoinViewController: UITextFieldDelegate {
             return
         }
         
-        print(password,passwordCheck)
         
         if password == passwordCheck {
             pwcheckLabel.textColor = .green
@@ -52,12 +57,20 @@ extension JoinViewController: UITextFieldDelegate {
             pwcheckLabel.text = "패스워드가 일치하지 않습니다."
         }
     }
+    
    
     // 키보드의 리턴(엔터) 키를 눌렀을 때 취해야 할 동작을 지정
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         switch textField {
+            
         case emailTextField:
+            nameTextField.becomeFirstResponder()
+            //다음 필드인 네임 필드에 포커스
+        case nameTextField:
+            PhoneNumTextField.becomeFirstResponder()
+            //다음 필드인 전화번호 필드에 포커스
+        case PhoneNumTextField:
             passwordTextField.becomeFirstResponder()
             //다음 필드인 패스워드 필드에 포커스
         case passwordTextField:
