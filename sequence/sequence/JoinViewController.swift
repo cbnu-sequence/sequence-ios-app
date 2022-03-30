@@ -5,6 +5,8 @@
 
 import UIKit
 import KakaoSDKAuth
+import Alamofire
+
 
 class JoinViewController: UIViewController {
     
@@ -23,21 +25,49 @@ class JoinViewController: UIViewController {
         emailTextField.delegate = self
         nameTextField.delegate = self
         PhoneNumTextField.delegate = self
-        passwordTextField.delegate = self
+        emailTextField.delegate = self
         pwcheckTextField.delegate = self
         
         pwcheckLabel.text = ""
         
     }
     
-    @IBAction func onBtnJoin(_ sender: UIButton) {
+    @IBAction func onBtnJoin(_ sender: Any) {
         
-    }
+        let data = [
+                    "email": self.emailTextField.text!,
+                    "password": self.emailTextField.text!,
+                    "phoneNumber": self.PhoneNumTextField.text!,
+                    "name": self.nameTextField.text!
+                ]
+        
+                // API 호출
+                        let url = "http://localhost:8879/auth/register"
+                        let dataRequest = AF.request(url, method: .post, parameters: data, encoding: JSONEncoding.default)
+                        // 서버 응답 처리
+                            dataRequest.responseData{ response in
+                                switch response.result {
+                                        case .success:
+                                    let complete = UIAlertController(title: "", message: "가입이 완료되었습니다", preferredStyle: .alert)
+                                    self.present(complete, animated: true)
+                                        case let .failure(error):
+                                    let fail = UIAlertController(title: "오류", message: "가입에 실패하였습니다", preferredStyle: .alert)
+                                    self.present(fail, animated: true)
+                                            print(error)
+                                        }
+                                }
     
+        }
+    
+        
+
     @IBAction func onBtnKakaoLogin(_ sender: UIButton) {
     }
     
 }
+    
+
+    
 
 extension JoinViewController: UITextFieldDelegate {
     
@@ -98,6 +128,8 @@ extension JoinViewController: UITextFieldDelegate {
             return true
         }
     }
+
+
 
 
 
