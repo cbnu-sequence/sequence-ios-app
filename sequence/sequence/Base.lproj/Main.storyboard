@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -91,12 +92,14 @@
                                     <segue destination="qYR-Bw-Egc" kind="show" id="pNS-mB-7Gw"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sequence" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjV-T0-o4j">
-                                <rect key="frame" x="85" y="119" width="244" height="58"/>
-                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="50"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="sequence" translatesAutoresizingMaskIntoConstraints="NO" id="m5d-7X-dgV">
+                                <rect key="frame" x="82" y="128" width="250" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="750" constant="60" id="NNi-kv-4oP"/>
+                                    <constraint firstAttribute="width" secondItem="m5d-7X-dgV" secondAttribute="height" multiplier="25:6" id="iUc-Gg-vpt"/>
+                                    <constraint firstAttribute="width" priority="750" constant="250" id="nRP-qi-ckl"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -104,12 +107,12 @@
                             <constraint firstItem="aao-Zn-uwJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5pT-Sc-9Jt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vVZ-DX-M6c" secondAttribute="trailing" constant="30" id="7t2-pm-3Er"/>
                             <constraint firstItem="KTg-gi-vQm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="A5T-Pv-JSA"/>
-                            <constraint firstItem="kjV-T0-o4j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BAM-Mx-Klv"/>
-                            <constraint firstItem="kjV-T0-o4j" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-300" id="Gmr-T0-f4J"/>
                             <constraint firstItem="vVZ-DX-M6c" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-150" id="Pyz-3n-Tdu"/>
                             <constraint firstItem="vVZ-DX-M6c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="UcU-IT-D3r"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KTg-gi-vQm" secondAttribute="bottom" constant="70" id="X1O-L7-uzT"/>
+                            <constraint firstItem="m5d-7X-dgV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z9i-1z-X9D"/>
                             <constraint firstItem="D7L-34-uso" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zas-e1-7cF"/>
+                            <constraint firstItem="m5d-7X-dgV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-290" id="cVd-Ik-XBg"/>
                             <constraint firstItem="7xl-AT-DEk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="igr-GN-fcy"/>
                             <constraint firstItem="D7L-34-uso" firstAttribute="top" secondItem="7xl-AT-DEk" secondAttribute="bottom" constant="30" id="ksG-rb-8pz"/>
                             <constraint firstItem="vVZ-DX-M6c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="niE-ho-CL8"/>
@@ -295,11 +298,123 @@
                         <outlet property="passwordTextField" destination="NbF-dk-XmG" id="YI3-NY-9j9"/>
                         <outlet property="pwcheckLabel" destination="xbG-Lm-RyM" id="sZ7-gP-uje"/>
                         <outlet property="pwcheckTextField" destination="xyy-Kn-dLl" id="g0s-V7-1FJ"/>
+                        <segue destination="KW2-hM-r0Z" kind="show" identifier="showSegue" id="egI-Zv-K3e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eLJ-P1-LxT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1478.2608695652175" y="95.758928571428569"/>
+        </scene>
+        <!--Certification View Controller-->
+        <scene sceneID="d7D-pm-j6X">
+            <objects>
+                <viewController storyboardIdentifier="CertificationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KW2-hM-r0Z" customClass="CertificationViewController" customModule="sequence" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GDQ-4h-uaa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이메일 인증" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLc-hh-cJJ">
+                                <rect key="frame" x="161.5" y="136" width="91.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.30196078430000001" green="0.30588235289999999" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="이메일" translatesAutoresizingMaskIntoConstraints="NO" id="qtn-pZ-OGF">
+                                <rect key="frame" x="167" y="168" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="2me-07-U2i"/>
+                                    <constraint firstAttribute="width" secondItem="qtn-pZ-OGF" secondAttribute="height" multiplier="1:1" id="JR1-fK-Q16"/>
+                                    <constraint firstAttribute="height" constant="80" id="g62-NB-vE3"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQe-y9-l7C">
+                                <rect key="frame" x="0.0" y="248" width="414" height="81"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qQe-y9-l7C" secondAttribute="height" multiplier="46:9" id="8pz-sc-82V"/>
+                                </constraints>
+                                <string key="text">입력하신 이메일로 
+인증번호가 발송되었습니다. </string>
+                                <color key="textColor" red="0.30196078430000001" green="0.30588235289999999" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="y3e-T5-tI5">
+                                <rect key="frame" x="20" y="447.5" width="374" height="101"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zCq-bI-BHX">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Obr-l4-E49"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSj-7N-IwM">
+                                        <rect key="frame" x="0.0" y="68" width="254.5" height="33"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="혹시 인증번호를 받지 못하셨나요 ?" subtitle="" titleAlignment="leading">
+                                            <fontDescription key="titleFontDescription" name=".AppleSDGothicNeoI-Regular" family=".Apple SD Gothic NeoI" pointSize="17"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onBtnResend:" destination="KW2-hM-r0Z" eventType="touchUpInside" id="aft-yG-hz9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="zCq-bI-BHX" secondAttribute="trailing" id="9kt-dc-95r"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18G-ij-g7z">
+                                <rect key="frame" x="20" y="798" width="374" height="44"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="완료">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onBtnSend:" destination="KW2-hM-r0Z" eventType="touchUpInside" id="ozF-Qf-oFq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="인증번호를 입력해주세요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g73-gx-dhc">
+                                <rect key="frame" x="0.0" y="407.5" width="414" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.30196078430000001" green="0.30588235289999999" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Bf5-uQ-2cm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Bf5-uQ-2cm" firstAttribute="bottom" secondItem="18G-ij-g7z" secondAttribute="bottom" constant="20" id="1Hn-54-WfP"/>
+                            <constraint firstItem="Bf5-uQ-2cm" firstAttribute="trailing" secondItem="y3e-T5-tI5" secondAttribute="trailing" constant="20" id="4Ol-7Q-vRR"/>
+                            <constraint firstItem="g73-gx-dhc" firstAttribute="centerX" secondItem="GDQ-4h-uaa" secondAttribute="centerX" id="AMp-83-xaG"/>
+                            <constraint firstItem="qtn-pZ-OGF" firstAttribute="centerY" secondItem="GDQ-4h-uaa" secondAttribute="centerY" constant="-240" id="JlO-yR-Sds"/>
+                            <constraint firstItem="Bf5-uQ-2cm" firstAttribute="trailing" secondItem="18G-ij-g7z" secondAttribute="trailing" constant="20" id="KFd-bW-Mfb"/>
+                            <constraint firstItem="18G-ij-g7z" firstAttribute="leading" secondItem="Bf5-uQ-2cm" secondAttribute="leading" constant="20" id="Rcg-aW-Dc0"/>
+                            <constraint firstItem="y3e-T5-tI5" firstAttribute="leading" secondItem="Bf5-uQ-2cm" secondAttribute="leading" constant="20" id="Ufl-lg-LAw"/>
+                            <constraint firstItem="Bf5-uQ-2cm" firstAttribute="trailing" secondItem="g73-gx-dhc" secondAttribute="trailing" id="Uto-KK-07C"/>
+                            <constraint firstItem="dLc-hh-cJJ" firstAttribute="centerY" secondItem="GDQ-4h-uaa" secondAttribute="centerY" constant="-300" id="Uy9-8h-3gf"/>
+                            <constraint firstItem="g73-gx-dhc" firstAttribute="leading" secondItem="Bf5-uQ-2cm" secondAttribute="leading" id="aHi-ei-TTM"/>
+                            <constraint firstItem="qQe-y9-l7C" firstAttribute="top" secondItem="qtn-pZ-OGF" secondAttribute="bottom" id="b4U-Sf-6wB"/>
+                            <constraint firstItem="y3e-T5-tI5" firstAttribute="centerX" secondItem="GDQ-4h-uaa" secondAttribute="centerX" id="dPk-lA-U33"/>
+                            <constraint firstItem="y3e-T5-tI5" firstAttribute="top" secondItem="g73-gx-dhc" secondAttribute="bottom" constant="10" id="el7-w0-jwm"/>
+                            <constraint firstItem="qQe-y9-l7C" firstAttribute="centerX" secondItem="GDQ-4h-uaa" secondAttribute="centerX" id="iDe-1F-0Zc"/>
+                            <constraint firstItem="y3e-T5-tI5" firstAttribute="centerY" secondItem="GDQ-4h-uaa" secondAttribute="centerY" constant="50" id="lWh-Mp-pY4"/>
+                            <constraint firstItem="qQe-y9-l7C" firstAttribute="leading" secondItem="Bf5-uQ-2cm" secondAttribute="leading" id="low-YA-PMP"/>
+                            <constraint firstItem="Bf5-uQ-2cm" firstAttribute="trailing" secondItem="qQe-y9-l7C" secondAttribute="trailing" id="oDd-K3-IV7"/>
+                            <constraint firstItem="dLc-hh-cJJ" firstAttribute="centerX" secondItem="GDQ-4h-uaa" secondAttribute="centerX" id="qez-Ys-fan"/>
+                            <constraint firstItem="qtn-pZ-OGF" firstAttribute="centerX" secondItem="GDQ-4h-uaa" secondAttribute="centerX" id="x74-Cy-1UQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ewS-KF-U0S"/>
+                    <connections>
+                        <outlet property="certificationNumTextField" destination="zCq-bI-BHX" id="RTG-i5-oKX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ycn-J2-iMO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2218.840579710145" y="95.758928571428569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8lj-qS-dKf">
@@ -322,7 +437,12 @@
     </scenes>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
+        <image name="sequence" width="1000" height="250"/>
+        <image name="이메일" width="512" height="512"/>
         <image name="카톡 로그인" width="183" height="45"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
