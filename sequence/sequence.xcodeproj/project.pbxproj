@@ -13,6 +13,7 @@
 		0C3F70D227E0845300BE37EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C3F70D027E0845300BE37EE /* Main.storyboard */; };
 		0C3F70D427E0845300BE37EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C3F70D327E0845300BE37EE /* Assets.xcassets */; };
 		0C3F70D727E0845300BE37EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C3F70D527E0845300BE37EE /* LaunchScreen.storyboard */; };
+		0C9F43BA27F5831900A1931C /* CertificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9F43B927F5831900A1931C /* CertificationViewController.swift */; };
 		0CBBBF8927E95A430011BB86 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBBBF8827E95A430011BB86 /* JoinViewController.swift */; };
 		D5C05397A4467C2B34630DBF /* Pods_sequence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 713D3FC0A894CAE77F8AB917 /* Pods_sequence.framework */; };
 /* End PBXBuildFile section */
@@ -26,6 +27,7 @@
 		0C3F70D327E0845300BE37EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C3F70D627E0845300BE37EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C3F70D827E0845300BE37EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C9F43B927F5831900A1931C /* CertificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificationViewController.swift; sourceTree = "<group>"; };
 		0CBBBF8827E95A430011BB86 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		271598981EF049B8D10840D9 /* Pods-sequence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sequence.debug.xcconfig"; path = "Target Support Files/Pods-sequence/Pods-sequence.debug.xcconfig"; sourceTree = "<group>"; };
 		713D3FC0A894CAE77F8AB917 /* Pods_sequence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sequence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +71,7 @@
 				0C3F70CC27E0845300BE37EE /* SceneDelegate.swift */,
 				0C3F70CE27E0845300BE37EE /* ViewController.swift */,
 				0C3F70D027E0845300BE37EE /* Main.storyboard */,
+				0C9F43B927F5831900A1931C /* CertificationViewController.swift */,
 				0CBBBF8827E95A430011BB86 /* JoinViewController.swift */,
 				0C3F70D327E0845300BE37EE /* Assets.xcassets */,
 				0C3F70D527E0845300BE37EE /* LaunchScreen.storyboard */,
@@ -211,6 +214,7 @@
 			files = (
 				0C3F70CF27E0845300BE37EE /* ViewController.swift in Sources */,
 				0C3F70CB27E0845300BE37EE /* AppDelegate.swift in Sources */,
+				0C9F43BA27F5831900A1931C /* CertificationViewController.swift in Sources */,
 				0CBBBF8927E95A430011BB86 /* JoinViewController.swift in Sources */,
 				0C3F70CD27E0845300BE37EE /* SceneDelegate.swift in Sources */,
 			);
