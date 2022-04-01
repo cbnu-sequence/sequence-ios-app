@@ -347,7 +347,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="Obr-l4-E49"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSj-7N-IwM">
@@ -373,6 +373,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="onBtnComplete:" destination="KW2-hM-r0Z" eventType="touchUpInside" id="OQR-vu-Yyn"/>
                                     <action selector="onBtnSend:" destination="KW2-hM-r0Z" eventType="touchUpInside" id="ozF-Qf-oFq"/>
                                 </connections>
                             </button>
