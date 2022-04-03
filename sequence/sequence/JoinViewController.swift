@@ -48,15 +48,12 @@ class JoinViewController: UIViewController {
                         dataRequest.validate().responseData { response in
                                 switch response.result {
                                         case .success:
-//                                    let complete = UIAlertController(title: "", message: "가입이 완료되었습니다", preferredStyle: .alert)
-//                                    self.present(complete, animated: true)
                                     self.performSegue(withIdentifier: "showSegue", sender: sender)
                                         case let .failure(error):
                                     let fail = UIAlertController(title: "오류", message: "가입에 실패하였습니다", preferredStyle: .alert)
                                     self.present(fail, animated: true)
                                             print(error)
                                         }
-                                print(response)
                                 }
     
         }
