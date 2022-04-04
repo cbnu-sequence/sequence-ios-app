@@ -51,6 +51,8 @@ class JoinViewController: UIViewController {
                                     self.performSegue(withIdentifier: "showSegue", sender: sender)
                                         case let .failure(error):
                                     let fail = UIAlertController(title: "오류", message: "가입에 실패하였습니다", preferredStyle: .alert)
+                                    let okay = UIAlertAction(title: "확인", style: .default, handler: nil)
+                                    fail.addAction(okay)
                                     self.present(fail, animated: true)
                                             print(error)
                                         }

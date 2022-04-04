@@ -31,22 +31,25 @@ class ViewController: UIViewController {
                     "password": self.textfieldPW.text!
                 ]
         
-                // API 호출
-                        let url = "http://localhost:8879/auth/login"
-                        let dataRequest = AF.request(url, method: .post, parameters: userdata, encoding: JSONEncoding.default)
-                        // 서버 응답 처리
-                        dataRequest.validate().responseData { response in
-                                switch response.result {
-                                        case .success:
-                                    if let mainpageView = self.storyboard?.instantiateViewController(identifier: "mainpageView") as? MainPageViewController {
-                                        self.present(mainpageView, animated: true, completion: nil)
-                                            }
-                                        case let .failure(error):
-                                    let fail = UIAlertController(title: "", message: "로그인에 실패하였습니다", preferredStyle: .alert)
-                                    self.present(fail, animated: true)
-                                            print(error)
-                                        }
-                                }
+    // API 호출
+            let url = "http://localhost:8879/auth/login"
+            let dataRequest = AF.request(url, method: .post, parameters: userdata, encoding: JSONEncoding.default)
+            // 서버 응답 처리
+            dataRequest.validate().responseData { response in
+                    switch response.result {
+                            case .success:
+                                let mainpageView = self.storyboard?.instantiateViewController(withIdentifier: "mainpageView")
+                                mainpageView?.modalPresentationStyle = .fullScreen //전체화면으로 보이게 설정
+                                mainpageView?.modalTransitionStyle = .crossDissolve //전환 애니메이션 설정
+                                        self.present(mainpageView!, animated: true, completion: nil)
+                            case let .failure(error):
+                                let fail = UIAlertController(title: "", message: "로그인에 실패하였습니다", preferredStyle: .alert)
+                                let okay = UIAlertAction(title: "확인", style: .default, handler: nil)
+                                fail.addAction(okay)
+                                self.present(fail, animated: true)
+                                        print(error)
+                            }
+                    }
         
     }
     
