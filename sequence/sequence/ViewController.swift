@@ -8,7 +8,8 @@
 import UIKit
 import KakaoSDKAuth
 import Alamofire
-
+import KakaoSDKCommon
+import KakaoSDKUser
 
 class ViewController: UIViewController {
     
@@ -55,6 +56,42 @@ class ViewController: UIViewController {
     
     
     @IBAction func onBtnKakaoLogin(_ sender: UIButton) {
+        
+        UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
+                if let error = error {
+                    print(error)
+                }
+                else {
+                    print("loginWithKakaoAccount() success.")
+
+                    //do something
+                    _ = oauthToken
+                }
+            
+            let accessToken = oauthToken?.accessToken
+            
+            
+            }
+        
+        
+//        // 카카오톡 설치 여부 확인
+//                if (UserApi.isKakaoTalkLoginAvailable()) {
+//                    UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
+//                        if let error = error {
+//                            // 예외 처리 (로그인 취소 등)
+//                            print(error)
+//                        }
+//                        else {
+//                            print("loginWithKakaoTalk() success.")
+//                            // do something
+//                            _ = oauthToken
+//                            // 어세스토큰
+//                            let accessToken = oauthToken?.accessToken
+//
+//
+//                        }
+//                    }
+//                }
     }
     
 }
