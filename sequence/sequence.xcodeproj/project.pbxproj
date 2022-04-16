@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C0BCD7D28071DA0002F4745 /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0BCD7C28071DA0002F4745 /* NoticeViewController.swift */; };
+		0C0BCD7F28071DBC002F4745 /* PomodoroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0BCD7E28071DBC002F4745 /* PomodoroViewController.swift */; };
+		0C0BCD8128071E14002F4745 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0BCD8028071E14002F4745 /* BoardViewController.swift */; };
 		0C248F9B27F89520004824EE /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C248F9A27F89520004824EE /* MainPageViewController.swift */; };
 		0C3F70CB27E0845300BE37EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F70CA27E0845300BE37EE /* AppDelegate.swift */; };
 		0C3F70CD27E0845300BE37EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F70CC27E0845300BE37EE /* SceneDelegate.swift */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C0BCD7C28071DA0002F4745 /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
+		0C0BCD7E28071DBC002F4745 /* PomodoroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroViewController.swift; sourceTree = "<group>"; };
+		0C0BCD8028071E14002F4745 /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
 		0C248F9A27F89520004824EE /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		0C3F70C727E0845300BE37EE /* sequence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sequence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C3F70CA27E0845300BE37EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +80,9 @@
 				0C3F70CE27E0845300BE37EE /* ViewController.swift */,
 				0C248F9A27F89520004824EE /* MainPageViewController.swift */,
 				0C3F70D027E0845300BE37EE /* Main.storyboard */,
+				0C0BCD7C28071DA0002F4745 /* NoticeViewController.swift */,
+				0C0BCD7E28071DBC002F4745 /* PomodoroViewController.swift */,
+				0C0BCD8028071E14002F4745 /* BoardViewController.swift */,
 				0C9F43B927F5831900A1931C /* CertificationViewController.swift */,
 				0CBBBF8827E95A430011BB86 /* JoinViewController.swift */,
 				0C3F70D327E0845300BE37EE /* Assets.xcassets */,
@@ -218,9 +227,12 @@
 				0C3F70CF27E0845300BE37EE /* ViewController.swift in Sources */,
 				0C3F70CB27E0845300BE37EE /* AppDelegate.swift in Sources */,
 				0C9F43BA27F5831900A1931C /* CertificationViewController.swift in Sources */,
+				0C0BCD7F28071DBC002F4745 /* PomodoroViewController.swift in Sources */,
 				0CBBBF8927E95A430011BB86 /* JoinViewController.swift in Sources */,
 				0C248F9B27F89520004824EE /* MainPageViewController.swift in Sources */,
+				0C0BCD7D28071DA0002F4745 /* NoticeViewController.swift in Sources */,
 				0C3F70CD27E0845300BE37EE /* SceneDelegate.swift in Sources */,
+				0C0BCD8128071E14002F4745 /* BoardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -129,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="766.66666666666674" y="95.758928571428569"/>
+            <point key="canvasLocation" x="738" y="96"/>
         </scene>
         <!--Join View Controller-->
         <scene sceneID="2N4-y0-OCx">
@@ -415,22 +415,82 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ycn-J2-iMO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2218.840579710145" y="95.758928571428569"/>
+            <point key="canvasLocation" x="2194" y="96"/>
         </scene>
-        <!--Main Page View Controller-->
-        <scene sceneID="NXI-xS-f34">
+        <!--메인-->
+        <scene sceneID="eSu-Aw-WtW">
             <objects>
-                <viewController storyboardIdentifier="mainpageView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="E3m-Rt-AYR" customClass="MainPageViewController" customModule="sequence" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="te8-N8-hMq">
+                <viewController storyboardIdentifier="mainpageView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HvA-br-lfc" customClass="MainPageViewController" customModule="sequence" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QB6-pH-bEC" customClass="Main">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="XZy-mQ-YqY"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="De9-ex-fBE">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iMO-4F-3dq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="De9-ex-fBE" firstAttribute="bottom" secondItem="iMO-4F-3dq" secondAttribute="bottom" id="2Ee-HM-jM5"/>
+                            <constraint firstItem="De9-ex-fBE" firstAttribute="leading" secondItem="iMO-4F-3dq" secondAttribute="leading" id="M3Q-bI-M9N"/>
+                            <constraint firstItem="De9-ex-fBE" firstAttribute="top" secondItem="iMO-4F-3dq" secondAttribute="top" id="ZPn-t9-QMY"/>
+                            <constraint firstItem="De9-ex-fBE" firstAttribute="trailing" secondItem="iMO-4F-3dq" secondAttribute="trailing" id="f8D-ed-Iba"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="메인" image="homekit" catalog="system" id="ZrM-ql-cRr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d4H-Mn-2Al" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3808.6956521739135" y="95.758928571428569"/>
+        </scene>
+        <!--뽀모도로-->
+        <scene sceneID="gXC-4k-NpF">
+            <objects>
+                <viewController id="bH7-Bh-Hmr" customClass="PomodoroViewController" customModule="sequence" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tKb-Pz-VF7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="3H1-vV-mr4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="뽀모도로" image="timer" catalog="system" id="bqA-iM-l4t"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="20b-th-GHA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dGA-GC-ZZo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2930" y="96"/>
+            <point key="canvasLocation" x="3886" y="751"/>
+        </scene>
+        <!--게시판-->
+        <scene sceneID="ahz-Cn-Tu8">
+            <objects>
+                <viewController id="Uz3-vG-gvn" customClass="BoardViewController" customModule="sequence" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ihu-AN-ekL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="rBY-Ln-q1Z"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="게시판" image="list.bullet.rectangle" catalog="system" id="4F4-4Z-WEP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UTB-Jt-eJc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3190" y="751"/>
+        </scene>
+        <!--공지사항-->
+        <scene sceneID="O8m-N7-A9C">
+            <objects>
+                <viewController id="V7W-qE-sVO" customClass="NoticeViewController" customModule="sequence" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c9e-4w-D5r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="tZZ-rZ-ICN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="공지사항" image="megaphone" catalog="system" id="gvQ-86-1fJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uuM-a0-UJC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4502.898550724638" y="95.758928571428569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8lj-qS-dKf">
@@ -448,12 +508,39 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jjw-5V-7B0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="39" y="96"/>
+            <point key="canvasLocation" x="-12" y="96"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="KZj-PW-AFe">
+            <objects>
+                <tabBarController storyboardIdentifier="maintapcontroller" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Pbe-05-6f9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rzl-u0-sLZ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <tabBarAppearance key="standardAppearance"/>
+                        <tabBarAppearance key="scrollEdgeAppearance"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="HvA-br-lfc" kind="relationship" relationship="viewControllers" id="MeN-LG-A1q"/>
+                        <segue destination="bH7-Bh-Hmr" kind="relationship" relationship="viewControllers" id="a4N-p3-1Ud"/>
+                        <segue destination="Uz3-vG-gvn" kind="relationship" relationship="viewControllers" id="k7p-0M-68E"/>
+                        <segue destination="V7W-qE-sVO" kind="relationship" relationship="viewControllers" id="Zzi-8d-vsv"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cyq-J6-Vvs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2898.5507246376815" y="95.758928571428569"/>
         </scene>
     </scenes>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
+        <image name="homekit" catalog="system" width="128" height="106"/>
+        <image name="list.bullet.rectangle" catalog="system" width="128" height="93"/>
+        <image name="megaphone" catalog="system" width="128" height="111"/>
         <image name="sequence" width="1000" height="250"/>
+        <image name="timer" catalog="system" width="128" height="121"/>
         <image name="이메일" width="512" height="512"/>
         <image name="카톡 로그인" width="183" height="45"/>
         <namedColor name="AccentColor">

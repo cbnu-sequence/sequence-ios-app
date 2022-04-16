@@ -39,10 +39,10 @@ class CertificationViewController: UIViewController {
                             let complete = UIAlertController(title: "", message: "가입이 완료되었습니다", preferredStyle: .alert)
                             let okay = UIAlertAction(title: "확인", style: .destructive, handler: {
                                 action in
-                                let mainpageView = self.storyboard?.instantiateViewController(withIdentifier: "mainpageView")
-                                mainpageView?.modalPresentationStyle = .fullScreen //전체화면으로 보이게 설정
-                                mainpageView?.modalTransitionStyle = .crossDissolve //전환 애니메이션 설정
-                                        self.present(mainpageView!, animated: true, completion: nil)
+                                let tapVC = self.storyboard?.instantiateViewController(withIdentifier: "maintapcontroller")
+                                tapVC?.modalPresentationStyle = .fullScreen //전체화면으로 보이게 설정
+                                tapVC?.modalTransitionStyle = .crossDissolve //전환 애니메이션 설정
+                                        self.present(tapVC!, animated: true, completion: nil)
                             })
                             complete.addAction(okay)
                             self.present(complete, animated: true)

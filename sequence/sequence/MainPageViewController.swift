@@ -7,14 +7,14 @@
 
 import UIKit
 
-class MainPageViewController: UIViewController {
+class MainPageViewController: UIViewController, UITabBarControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
     }
-    
 
 
 }
+
+
