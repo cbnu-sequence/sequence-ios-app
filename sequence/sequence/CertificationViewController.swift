@@ -18,11 +18,25 @@ class CertificationViewController: UIViewController {
         
     }
     
-    @IBAction func onBtnSend(_ sender: UIButton) {
-    }
-    
-    
+
     @IBAction func onBtnResend(_ sender: UIButton) {
+        
+        
+        let url = "http://localhost:8879/auth/mail"
+        let dataRequest = AF.request(url, method: .post, encoding: JSONEncoding.default)
+        // 서버 응답 처리
+        dataRequest.validate().responseData { response in
+                switch response.result {
+                        case .success:
+                            let resend = UIAlertController(title: "", message: "메일이 재전송되었습니다.", preferredStyle: .alert)
+                            let okay = UIAlertAction(title: "확인", style: .default, handler:nil)
+                            resend.addAction(okay)
+                            self.present(resend, animated: true)
+                    
+                case let .failure(error):
+                            print(error)
+                    }
+            }
     }
     
     

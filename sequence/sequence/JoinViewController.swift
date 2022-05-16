@@ -1,5 +1,3 @@
-
-
 import UIKit
 import KakaoSDKAuth
 import Alamofire
@@ -68,31 +66,31 @@ class JoinViewController: UIViewController {
                     print(error)
                 }
                 else {
-                   // print("loginWithKakaoAccount() success.")
 
-                    //do something
                     _ = oauthToken
-                    print("어세스토큰 \(oauthToken!.accessToken)")
                     
                     let kakaoToken = [
                         "accessToken" : oauthToken!.accessToken
                         ]
-                    
-                    
-                    
+ 
                     let url = "http://localhost:8879/auth/kakao/login"
                     let dataRequest = AF.request(url, parameters: kakaoToken, encoder: URLEncodedFormParameterEncoder.default)
                     
                     dataRequest.validate().response { response in
                         switch response.result {
-                                case .success:
-                            print("sucess")
-                                case let .failure(error):
+                                
+                            case let .failure(error):
                             let fail = UIAlertController(title: "오류", message: "로그인에 실패하였습니다", preferredStyle: .alert)
                             let okay = UIAlertAction(title: "확인", style: .default, handler: nil)
                             fail.addAction(okay)
                             self.present(fail, animated: true)
                                     print(error)
+                            case .success:
+                            let mainpageView = self.storyboard?.instantiateViewController(withIdentifier: "maintapcontroller")
+                            mainpageView?.modalPresentationStyle = .fullScreen //전체화면으로 보이게 설정
+                            mainpageView?.modalTransitionStyle = .crossDissolve //전환 애니메이션 설정
+                                    self.present(mainpageView!, animated: true, completion: nil)
+
                         }
                     }
                 }
@@ -100,23 +98,6 @@ class JoinViewController: UIViewController {
                     
                     
 
-            UserApi.shared.accessTokenInfo {(accessTokenInfo, error) in
-                if let error = error {
-                    print(error)
-                }
-                else {
-                    //print("accessTokenInfo() success.")
-                    
-                    let mainpageView = self.storyboard?.instantiateViewController(withIdentifier: "maintapcontroller")
-                    mainpageView?.modalPresentationStyle = .fullScreen //전체화면으로 보이게 설정
-                    mainpageView?.modalTransitionStyle = .crossDissolve //전환 애니메이션 설정
-                            self.present(mainpageView!, animated: true, completion: nil)
-
-                    //do something
-                    _ = accessTokenInfo
-                    print(accessTokenInfo)
-                }
-            }
         
         
         
