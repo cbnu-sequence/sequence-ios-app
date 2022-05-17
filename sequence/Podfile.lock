@@ -1,40 +1,44 @@
 PODS:
-  - Alamofire (5.5.0)
-  - KakaoSDK (2.9.0):
-    - KakaoSDKAuth (= 2.9.0)
-    - KakaoSDKCommon (= 2.9.0)
-    - KakaoSDKLink (= 2.9.0)
-    - KakaoSDKNavi (= 2.9.0)
-    - KakaoSDKStory (= 2.9.0)
-    - KakaoSDKTalk (= 2.9.0)
-    - KakaoSDKTemplate (= 2.9.0)
-    - KakaoSDKUser (= 2.9.0)
-  - KakaoSDKAuth (2.9.0):
-    - KakaoSDKCommon (= 2.9.0)
-  - KakaoSDKCommon (2.9.0):
-    - KakaoSDKCommon/Common (= 2.9.0)
-    - KakaoSDKCommon/Network (= 2.9.0)
-  - KakaoSDKCommon/Common (2.9.0)
-  - KakaoSDKCommon/Network (2.9.0):
+  - Alamofire (5.6.1)
+  - KakaoSDK (2.9.1):
+    - KakaoSDKAuth (= 2.9.1)
+    - KakaoSDKCommon (= 2.9.1)
+    - KakaoSDKLink (= 2.9.1)
+    - KakaoSDKNavi (= 2.9.1)
+    - KakaoSDKStory (= 2.9.1)
+    - KakaoSDKTalk (= 2.9.1)
+    - KakaoSDKTemplate (= 2.9.1)
+    - KakaoSDKUser (= 2.9.1)
+  - KakaoSDKAuth (2.9.1):
+    - KakaoSDKCommon (= 2.9.1)
+  - KakaoSDKCommon (2.9.1):
+    - KakaoSDKCommon/Common (= 2.9.1)
+    - KakaoSDKCommon/Network (= 2.9.1)
+  - KakaoSDKCommon/Common (2.9.1)
+  - KakaoSDKCommon/Network (2.9.1):
     - Alamofire (~> 5.1)
-    - KakaoSDKCommon/Common (= 2.9.0)
-  - KakaoSDKLink (2.9.0):
-    - KakaoSDKCommon (= 2.9.0)
-    - KakaoSDKTemplate (= 2.9.0)
-  - KakaoSDKNavi (2.9.0):
-    - KakaoSDKCommon/Common (= 2.9.0)
-  - KakaoSDKStory (2.9.0):
-    - KakaoSDKUser (= 2.9.0)
-  - KakaoSDKTalk (2.9.0):
-    - KakaoSDKTemplate (= 2.9.0)
-    - KakaoSDKUser (= 2.9.0)
-  - KakaoSDKTemplate (2.9.0):
-    - KakaoSDKCommon/Common (= 2.9.0)
-  - KakaoSDKUser (2.9.0):
-    - KakaoSDKAuth (= 2.9.0)
+    - KakaoSDKCommon/Common (= 2.9.1)
+  - KakaoSDKLink (2.9.1):
+    - KakaoSDKCommon (= 2.9.1)
+    - KakaoSDKTemplate (= 2.9.1)
+  - KakaoSDKNavi (2.9.1):
+    - KakaoSDKCommon/Common (= 2.9.1)
+  - KakaoSDKStory (2.9.1):
+    - KakaoSDKUser (= 2.9.1)
+  - KakaoSDKTalk (2.9.1):
+    - KakaoSDKTemplate (= 2.9.1)
+    - KakaoSDKUser (= 2.9.1)
+  - KakaoSDKTemplate (2.9.1):
+    - KakaoSDKCommon/Common (= 2.9.1)
+  - KakaoSDKUser (2.9.1):
+    - KakaoSDKAuth (= 2.9.1)
+  - Pageboy (3.6.2)
+  - Tabman (2.12.0):
+    - Pageboy (~> 3.6.0)
 
 DEPENDENCIES:
   - KakaoSDK
+  - Tabman (~> 2.9)
 
 SPEC REPOS:
   trunk:
@@ -48,19 +52,23 @@ SPEC REPOS:
     - KakaoSDKTalk
     - KakaoSDKTemplate
     - KakaoSDKUser
+    - Pageboy
+    - Tabman
 
 SPEC CHECKSUMS:
-  Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
-  KakaoSDK: d5a5a38ebf4da97beeecf100ac3dc9a020e19648
-  KakaoSDKAuth: 5d9eec3317320dc60015ba8d597b2ad32fc70b1a
-  KakaoSDKCommon: aaed06bb779b92cd6f5c35e94160d4ecfaaac511
-  KakaoSDKLink: 575d1119427a7b278eb49da656f8d648a0a94411
-  KakaoSDKNavi: 8b767610d59fc044f1f5df3f29c89688a446a1fc
-  KakaoSDKStory: a494a364a3539601289d01aadd117f165f39d7b2
-  KakaoSDKTalk: b0ac197fd7fce4afc9af3f012c1abee7f053c910
-  KakaoSDKTemplate: eaf03ad5e44d374cbfff85588552a5627cd0519c
-  KakaoSDKUser: 37e92bfc1d36b339420952080a8d31c217a38a63
+  Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
+  KakaoSDK: 863b75c045a01065faf1dd67393b62dfe2b4ce3a
+  KakaoSDKAuth: 8ec514e64f57f405735e92483fdae1cc2830d351
+  KakaoSDKCommon: c4b08131fdba6770a280ffe83916048174f329bf
+  KakaoSDKLink: d138ac61dc3103d15f5b3ceafae9a29073b04bd4
+  KakaoSDKNavi: 2bf83faa1a841467d7f398c714652cb5b0e22611
+  KakaoSDKStory: 423a381e0e9686c2b4e3058f0fc62befa4bc73bd
+  KakaoSDKTalk: b4ba0628c770e1781307296b1ccaabec34327799
+  KakaoSDKTemplate: 816a1c24855b30f1ad337e754963c8b17ad5053d
+  KakaoSDKUser: 3b82c8f4b7bdd8584b296cf91d1be4b4a84102fb
+  Pageboy: cf121b9dd48c63f3f281b2a9ec93d02e0f23879b
+  Tabman: 447a50447ed2869c39ab3b1a779327e43e067c4e
 
-PODFILE CHECKSUM: af0ddf9cfaa0e5f42876285ac9fd0f24baa7ed60
+PODFILE CHECKSUM: c2f1fdeadbf79f7c60e825d3d94f7286bd855791
 
 COCOAPODS: 1.11.2

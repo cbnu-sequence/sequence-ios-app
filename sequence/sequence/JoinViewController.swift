@@ -1,11 +1,9 @@
-//
-//  JoinViewController.swift
-//  sequence
-
-
 import UIKit
 import KakaoSDKAuth
 import Alamofire
+import KakaoSDKCommon
+import KakaoSDKUser
+
 
 
 class JoinViewController: UIViewController {
@@ -36,7 +34,7 @@ class JoinViewController: UIViewController {
         
         let data = [
                     "email": self.emailTextField.text!,
-                    "password": self.emailTextField.text!,
+                    "password": self.passwordTextField.text!,
                     "phoneNumber": self.PhoneNumTextField.text!,
                     "name": self.nameTextField.text!
                 ]
@@ -48,25 +46,83 @@ class JoinViewController: UIViewController {
                         dataRequest.validate().responseData { response in
                                 switch response.result {
                                         case .success:
-//                                    let complete = UIAlertController(title: "", message: "가입이 완료되었습니다", preferredStyle: .alert)
-//                                    self.present(complete, animated: true)
                                     self.performSegue(withIdentifier: "showSegue", sender: sender)
                                         case let .failure(error):
                                     let fail = UIAlertController(title: "오류", message: "가입에 실패하였습니다", preferredStyle: .alert)
+                                    let okay = UIAlertAction(title: "확인", style: .default, handler: nil)
+                                    fail.addAction(okay)
                                     self.present(fail, animated: true)
                                             print(error)
                                         }
-                                print(response)
                                 }
     
         }
-    
-        
 
-    @IBAction func onBtnKakaoLogin(_ sender: UIButton) {
-    }
     
+    @IBAction func onBtnKakaoLogin(_ sender: UIButton) {
+        
+        UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
+                if let error = error {
+                    print(error)
+                }
+                else {
+
+                    _ = oauthToken
+                    
+                    let kakaoToken = [
+                        "accessToken" : oauthToken!.accessToken
+                        ]
+ 
+                    let url = "http://localhost:8879/auth/kakao/login"
+                    let dataRequest = AF.request(url, parameters: kakaoToken, encoder: URLEncodedFormParameterEncoder.default)
+                    
+                    dataRequest.validate().response { response in
+                        switch response.result {
+                                
+                            case let .failure(error):
+                            let fail = UIAlertController(title: "오류", message: "로그인에 실패하였습니다", preferredStyle: .alert)
+                            let okay = UIAlertAction(title: "확인", style: .default, handler: nil)
+                            fail.addAction(okay)
+                            self.present(fail, animated: true)
+                                    print(error)
+                            case .success:
+                            let mainpageView = self.storyboard?.instantiateViewController(withIdentifier: "maintapcontroller")
+                            mainpageView?.modalPresentationStyle = .fullScreen //전체화면으로 보이게 설정
+                            mainpageView?.modalTransitionStyle = .crossDissolve //전환 애니메이션 설정
+                                    self.present(mainpageView!, animated: true, completion: nil)
+
+                        }
+                    }
+                }
+        }
+                    
+                    
+
+        
+        
+        
+//        // 카카오톡 설치 여부 확인
+//                if (UserApi.isKakaoTalkLoginAvailable()) {
+//                    UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
+//                        if let error = error {
+//                            // 예외 처리 (로그인 취소 등)
+//                            print(error)
+//                        }
+//                        else {
+//                            print("loginWithKakaoTalk() success.")
+//                            // do something
+//                            _ = oauthToken
+//                            // 어세스토큰
+//
+//
+//                        }
+//                    }
+//                }
+        }
 }
+    
+    
+
     
 
     
@@ -79,7 +135,6 @@ extension JoinViewController: UITextFieldDelegate {
             pwcheckLabel.text = ""
             return
         }
-        
         
         if password == passwordCheck {
             pwcheckLabel.textColor = .green

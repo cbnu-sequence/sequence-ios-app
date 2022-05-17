@@ -7,5 +7,7 @@ target 'sequence' do
 
   # Pods for sequence
   pod 'KakaoSDK'
+  
+  pod 'Tabman', '~> 2.9'
 
 end
