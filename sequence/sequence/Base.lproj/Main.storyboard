@@ -480,6 +480,21 @@
             </objects>
             <point key="canvasLocation" x="3668" y="903"/>
         </scene>
+        <!--Project View Controller-->
+        <scene sceneID="53X-qz-A8X">
+            <objects>
+                <viewController storyboardIdentifier="ProjectViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yf7-HB-hlr" customClass="ProjectViewController" customModule="sequence" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZXE-yE-B1g">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="tVn-yO-EAA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Jt-y0-BcL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1290" y="903"/>
+        </scene>
         <!--게시판-->
         <scene sceneID="ahz-Cn-Tu8">
             <objects>
@@ -496,10 +511,10 @@
             </objects>
             <point key="canvasLocation" x="2006" y="903"/>
         </scene>
-        <!--Share Information View Controller-->
+        <!--Share Info View Controller-->
         <scene sceneID="nc2-eb-trA">
             <objects>
-                <viewController storyboardIdentifier="ProjectIntroduceController" id="Dtf-Ma-Ede" customClass="ShareInformationViewController" customModule="sequence" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShareInfoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Dtf-Ma-Ede" customClass="ShareInfoViewController" customModule="sequence" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SRr-ze-UGk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

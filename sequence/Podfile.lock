@@ -32,9 +32,13 @@ PODS:
     - KakaoSDKCommon/Common (= 2.9.1)
   - KakaoSDKUser (2.9.1):
     - KakaoSDKAuth (= 2.9.1)
+  - Pageboy (3.6.2)
+  - Tabman (2.12.0):
+    - Pageboy (~> 3.6.0)
 
 DEPENDENCIES:
   - KakaoSDK
+  - Tabman (~> 2.9)
 
 SPEC REPOS:
   trunk:
@@ -48,6 +52,8 @@ SPEC REPOS:
     - KakaoSDKTalk
     - KakaoSDKTemplate
     - KakaoSDKUser
+    - Pageboy
+    - Tabman
 
 SPEC CHECKSUMS:
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
@@ -60,7 +66,9 @@ SPEC CHECKSUMS:
   KakaoSDKTalk: b4ba0628c770e1781307296b1ccaabec34327799
   KakaoSDKTemplate: 816a1c24855b30f1ad337e754963c8b17ad5053d
   KakaoSDKUser: 3b82c8f4b7bdd8584b296cf91d1be4b4a84102fb
+  Pageboy: cf121b9dd48c63f3f281b2a9ec93d02e0f23879b
+  Tabman: 447a50447ed2869c39ab3b1a779327e43e067c4e
 
-PODFILE CHECKSUM: 830676dcf7d12f9789cc8cad988a322ff7283498
+PODFILE CHECKSUM: c2f1fdeadbf79f7c60e825d3d94f7286bd855791
 
 COCOAPODS: 1.11.2
