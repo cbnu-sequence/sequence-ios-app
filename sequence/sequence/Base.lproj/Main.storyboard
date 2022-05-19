@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="loginView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="sequence" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="sequence" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleAspectFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -134,7 +134,7 @@
         <!--Join View Controller-->
         <scene sceneID="2N4-y0-OCx">
             <objects>
-                <viewController id="qYR-Bw-Egc" customClass="JoinViewController" customModule="sequence" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qYR-Bw-Egc" customClass="JoinViewController" customModule="sequence" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mTW-Qj-gVK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -308,7 +308,7 @@
         <!--Certification View Controller-->
         <scene sceneID="d7D-pm-j6X">
             <objects>
-                <viewController storyboardIdentifier="CertificationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KW2-hM-r0Z" customClass="CertificationViewController" customModule="sequence" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CertificationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KW2-hM-r0Z" customClass="CertificationViewController" customModule="sequence" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GDQ-4h-uaa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -419,7 +419,7 @@
         <!--메인-->
         <scene sceneID="eSu-Aw-WtW">
             <objects>
-                <viewController storyboardIdentifier="mainpageView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HvA-br-lfc" customClass="MainPageViewController" customModule="sequence" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainpageView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HvA-br-lfc" customClass="MainPageViewController" customModule="sequence" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QB6-pH-bEC" customClass="Main">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -467,7 +467,7 @@
         <!--뽀모도로-->
         <scene sceneID="gXC-4k-NpF">
             <objects>
-                <viewController id="bH7-Bh-Hmr" customClass="PomodoroViewController" customModule="sequence" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bH7-Bh-Hmr" customClass="PomodoroViewController" customModule="sequence" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tKb-Pz-VF7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -498,7 +498,7 @@
         <!--게시판-->
         <scene sceneID="ahz-Cn-Tu8">
             <objects>
-                <viewController storyboardIdentifier="InformationSharingController" id="Uz3-vG-gvn" customClass="BoardViewController" customModule="sequence" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InformationSharingController" id="Uz3-vG-gvn" customClass="BoardViewController" customModule="sequence" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ihu-AN-ekL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -529,7 +529,7 @@
         <!--공지사항-->
         <scene sceneID="O8m-N7-A9C">
             <objects>
-                <viewController id="V7W-qE-sVO" customClass="NoticeViewController" customModule="sequence" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="V7W-qE-sVO" customClass="NoticeViewController" customModule="sequence" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c9e-4w-D5r">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
