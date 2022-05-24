@@ -15,8 +15,9 @@ class NoticeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
 
     
-    public var page = 1
+    var page = 1
     var noticeData: [Notice] = []
+    var fetchingMore: Bool = false
     
     
     @IBOutlet weak var noticeTableView: UITableView!
@@ -28,8 +29,7 @@ class NoticeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         noticeTableView.delegate = self
         // 테이블 뷰의 데이터소스 처리
         noticeTableView.dataSource = self
-        
-        getNoticeData()
+     
         
 
      
@@ -43,10 +43,6 @@ class NoticeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func getNoticeData() {
 
-       var page = 1
-//       let hashPage = ["page": page]
-         
-
    
    let url = "http://localhost:8879/post/notice?page=\(page)"
    let header : HTTPHeaders = ["Content-Type": "application/json"]
@@ -58,7 +54,6 @@ class NoticeViewController: UIViewController, UITableViewDelegate, UITableViewDa
                do {
                    let dataJSON = try JSONSerialization.data(withJSONObject:obj, options: .prettyPrinted)
                    let getData = try JSONDecoder().decode(APIResponse.self, from: dataJSON)
-                   self.noticeData = getData.data
                    DispatchQueue.main.async {
                        self.noticeTableView.reloadData()
                    }
@@ -95,26 +90,46 @@ class NoticeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return 65
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { //클릭한 셀의 이벤트 처리
+        
+        guard let vc =  storyboard?.instantiateViewController(identifier: "ShowNoticeViewController") as? ShowNoticeViewController else
+        { return }
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        
+        let notice: Notice = self.noticeData[indexPath.row]
+        
+        vc.titletext = notice.title!
+        vc.nametext = (notice.writer?.name)!
+        vc.contenttext = notice.content!
+        vc.datetext = notice.createdAt!
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    
+    
+    }
+
 }
-
-
+  
 
 extension NoticeViewController : UIScrollViewDelegate {
-    
+
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
+
         let contentOffset_y = scrollView.contentOffset.y
         let tableViewContentSize = noticeTableView.contentSize.height
         let pagination_y = tableViewContentSize * 0.2
-        
+
         if contentOffset_y > tableViewContentSize - pagination_y {
             
-            
-                    
+            page += 1
+            getNoticeData()
+
                 }
-                
+
             }
-            
+
         }
         
     
