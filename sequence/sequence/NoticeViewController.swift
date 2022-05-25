@@ -16,8 +16,8 @@ class NoticeViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     
     var page = 1
-    var noticeData: [Notice] = []
-    var fetchingMore: Bool = false
+    var noticeData: Array<Notice> = []
+    var fetchingMore : Bool = false
     
     
     @IBOutlet weak var noticeTableView: UITableView!
@@ -29,6 +29,8 @@ class NoticeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         noticeTableView.delegate = self
         // 테이블 뷰의 데이터소스 처리
         noticeTableView.dataSource = self
+        
+        //scrollViewDidScroll
      
         
 
@@ -54,6 +56,12 @@ class NoticeViewController: UIViewController, UITableViewDelegate, UITableViewDa
                do {
                    let dataJSON = try JSONSerialization.data(withJSONObject:obj, options: .prettyPrinted)
                    let getData = try JSONDecoder().decode(APIResponse.self, from: dataJSON)
+
+                   for i in 0 ..< getData.data.count {
+                       self.noticeData.append(getData.data[i])
+                   }
+                   
+                   
                    DispatchQueue.main.async {
                        self.noticeTableView.reloadData()
                    }
@@ -109,29 +117,31 @@ class NoticeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+            if noticeTableView.contentOffset.y > (noticeTableView.contentSize.height - noticeTableView.bounds.size.height) {
+                if !fetchingMore {
+                    beginBatchFetch()
+                }
+            }
+    }
+
+    private func beginBatchFetch() {
+            fetchingMore = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.7, execute: {
+                self.page += 1
+                
+                self.getNoticeData()
+            
+                self.fetchingMore = false
+                self.noticeTableView.reloadData()
+            })
+     }
 
 }
-  
 
-extension NoticeViewController : UIScrollViewDelegate {
 
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
 
-        let contentOffset_y = scrollView.contentOffset.y
-        let tableViewContentSize = noticeTableView.contentSize.height
-        let pagination_y = tableViewContentSize * 0.2
-
-        if contentOffset_y > tableViewContentSize - pagination_y {
-            
-            page += 1
-            getNoticeData()
-
-                }
-
-            }
-
-        }
-        
     
     
 
