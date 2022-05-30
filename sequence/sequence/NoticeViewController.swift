@@ -46,7 +46,7 @@ class NoticeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func getNoticeData() {
 
    
-   let url = "http://localhost:8879/post/notice?page=\(page)"
+   let url = "http://localhost:8879/post/notice?sort=-createdAt&page=\(page)&limit=20"
    let header : HTTPHeaders = ["Content-Type": "application/json"]
    let dataRequest = AF.request(url, method: .get, encoding: JSONEncoding.default, headers: header)
    // 서버 응답 처리
