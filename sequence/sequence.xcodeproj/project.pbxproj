@@ -31,6 +31,7 @@
 		0CF5B3CF284749B6009C303A /* MonthlyPomodoroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF5B3CE284749B6009C303A /* MonthlyPomodoroViewController.swift */; };
 		0CF5B3D3284749EB009C303A /* RankingPomodoroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF5B3D2284749EB009C303A /* RankingPomodoroViewController.swift */; };
 		2628520AA8895B4DA4E35F2A /* Pods_sequence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5285C5343FEE6B020B012D1D /* Pods_sequence.framework */; };
+		2E65FC5128392BC6002C3516 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E65FC5028392BC6002C3516 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		0CE10CA4283779BA00D08F83 /* ShowNoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowNoticeViewController.swift; sourceTree = "<group>"; };
 		0CF0060328332BDF00E0FDA6 /* ShareInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareInfoViewController.swift; sourceTree = "<group>"; };
 		0CF0060528332BEA00E0FDA6 /* ProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
+		2E65FC5028392BC6002C3516 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0CF0060B2833793B00E0FDA6 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		0CF5B3CA2847495B009C303A /* DailyPomodoroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPomodoroViewController.swift; sourceTree = "<group>"; };
 		0CF5B3CC28474972009C303A /* WeeklyPomodoroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyPomodoroViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				0C3F70CA27E0845300BE37EE /* AppDelegate.swift */,
 				0C3F70CC27E0845300BE37EE /* SceneDelegate.swift */,
 				0C3F70CE27E0845300BE37EE /* ViewController.swift */,
+				2E65FC5028392BC6002C3516 /* ContentView.swift */,
 				0C248F9A27F89520004824EE /* MainPageViewController.swift */,
 				0C3F70D027E0845300BE37EE /* Main.storyboard */,
 				0CF0060B2833793B00E0FDA6 /* Setting.swift */,
@@ -272,6 +275,7 @@
 				0C248F9B27F89520004824EE /* MainPageViewController.swift in Sources */,
 				0C0BCD7D28071DA0002F4745 /* NoticeViewController.swift in Sources */,
 				0CAD18C628321FCA008E4265 /* Notice.swift in Sources */,
+				2E65FC5128392BC6002C3516 /* ContentView.swift in Sources */,
 				0C3F70CD27E0845300BE37EE /* SceneDelegate.swift in Sources */,
 				0CF5B3CB2847495B009C303A /* DailyPomodoroViewController.swift in Sources */,
 				0CF0060628332BEA00E0FDA6 /* ProjectViewController.swift in Sources */,
