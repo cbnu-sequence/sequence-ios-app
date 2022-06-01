@@ -19,11 +19,12 @@
 		0C3F70D727E0845300BE37EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C3F70D527E0845300BE37EE /* LaunchScreen.storyboard */; };
 		0C9F43BA27F5831900A1931C /* CertificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9F43B927F5831900A1931C /* CertificationViewController.swift */; };
 		0CAD18C228321C64008E4265 /* NoticeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD18C128321C64008E4265 /* NoticeTableViewCell.swift */; };
-		0CAD18C428321E78008E4265 /* NoticeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD18C328321E78008E4265 /* NoticeTableViewController.swift */; };
 		0CAD18C628321FCA008E4265 /* Notice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD18C528321FCA008E4265 /* Notice.swift */; };
 		0CBBBF8927E95A430011BB86 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBBBF8827E95A430011BB86 /* JoinViewController.swift */; };
+		0CE10CA5283779BA00D08F83 /* ShowNoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE10CA4283779BA00D08F83 /* ShowNoticeViewController.swift */; };
 		0CF0060428332BDF00E0FDA6 /* ShareInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0060328332BDF00E0FDA6 /* ShareInfoViewController.swift */; };
 		0CF0060628332BEA00E0FDA6 /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0060528332BEA00E0FDA6 /* ProjectViewController.swift */; };
+		0CF0060C2833793B00E0FDA6 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0060B2833793B00E0FDA6 /* Setting.swift */; };
 		2628520AA8895B4DA4E35F2A /* Pods_sequence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5285C5343FEE6B020B012D1D /* Pods_sequence.framework */; };
 		2E65FC5128392BC6002C3516 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E65FC5028392BC6002C3516 /* ContentView.swift */; };
 /* End PBXBuildFile section */
@@ -44,12 +45,13 @@
 		0C3F70D827E0845300BE37EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C9F43B927F5831900A1931C /* CertificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificationViewController.swift; sourceTree = "<group>"; };
 		0CAD18C128321C64008E4265 /* NoticeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeTableViewCell.swift; sourceTree = "<group>"; };
-		0CAD18C328321E78008E4265 /* NoticeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeTableViewController.swift; sourceTree = "<group>"; };
 		0CAD18C528321FCA008E4265 /* Notice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notice.swift; sourceTree = "<group>"; };
 		0CBBBF8827E95A430011BB86 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
+		0CE10CA4283779BA00D08F83 /* ShowNoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowNoticeViewController.swift; sourceTree = "<group>"; };
 		0CF0060328332BDF00E0FDA6 /* ShareInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareInfoViewController.swift; sourceTree = "<group>"; };
 		0CF0060528332BEA00E0FDA6 /* ProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
 		2E65FC5028392BC6002C3516 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0CF0060B2833793B00E0FDA6 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		5285C5343FEE6B020B012D1D /* Pods_sequence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sequence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C9C3EF3475738122524E0D /* Pods-sequence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sequence.debug.xcconfig"; path = "Target Support Files/Pods-sequence/Pods-sequence.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,11 +95,12 @@
 				2E65FC5028392BC6002C3516 /* ContentView.swift */,
 				0C248F9A27F89520004824EE /* MainPageViewController.swift */,
 				0C3F70D027E0845300BE37EE /* Main.storyboard */,
+				0CF0060B2833793B00E0FDA6 /* Setting.swift */,
 				0CBBBF8827E95A430011BB86 /* JoinViewController.swift */,
 				0C9F43B927F5831900A1931C /* CertificationViewController.swift */,
 				0CAD18C128321C64008E4265 /* NoticeTableViewCell.swift */,
 				0C0BCD7C28071DA0002F4745 /* NoticeViewController.swift */,
-				0CAD18C328321E78008E4265 /* NoticeTableViewController.swift */,
+				0CE10CA4283779BA00D08F83 /* ShowNoticeViewController.swift */,
 				0CAD18C528321FCA008E4265 /* Notice.swift */,
 				0C0BCD7E28071DBC002F4745 /* PomodoroViewController.swift */,
 				0C0BCD8028071E14002F4745 /* BoardViewController.swift */,
@@ -248,9 +251,10 @@
 				0C9F43BA27F5831900A1931C /* CertificationViewController.swift in Sources */,
 				0CAD18C228321C64008E4265 /* NoticeTableViewCell.swift in Sources */,
 				0C0BCD7F28071DBC002F4745 /* PomodoroViewController.swift in Sources */,
+				0CE10CA5283779BA00D08F83 /* ShowNoticeViewController.swift in Sources */,
+				0CF0060C2833793B00E0FDA6 /* Setting.swift in Sources */,
 				0CBBBF8927E95A430011BB86 /* JoinViewController.swift in Sources */,
 				0C248F9B27F89520004824EE /* MainPageViewController.swift in Sources */,
-				0CAD18C428321E78008E4265 /* NoticeTableViewController.swift in Sources */,
 				0C0BCD7D28071DA0002F4745 /* NoticeViewController.swift in Sources */,
 				0CAD18C628321FCA008E4265 /* Notice.swift in Sources */,
 				2E65FC5128392BC6002C3516 /* ContentView.swift in Sources */,
