@@ -464,21 +464,228 @@
             </objects>
             <point key="canvasLocation" x="3706" y="-20"/>
         </scene>
-        <!--뽀모도로-->
+        <!--Pomodoro View Controller-->
         <scene sceneID="gXC-4k-NpF">
             <objects>
                 <viewController id="bH7-Bh-Hmr" customClass="PomodoroViewController" customModule="sequence" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tKb-Pz-VF7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pomodoro" translatesAutoresizingMaskIntoConstraints="NO" id="SPC-f5-qwR">
+                                <rect key="frame" x="70" y="128" width="235" height="125.33333333333331"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="SPC-f5-qwR" secondAttribute="height" multiplier="15:8" id="JWc-4t-mei"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUg-PC-Vt1">
+                                <rect key="frame" x="70" y="501" width="235" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="tdu-J9-eHb"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="타이머 시작">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="30"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.76101781139292923" green="0.23916860713170562" blue="0.13172672519326781" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onBtnTimer:" destination="bH7-Bh-Hmr" eventType="touchUpInside" id="dHS-tT-36B"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="25분동안 할 일을 입력해주세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZuT-Vd-IqF">
+                                <rect key="frame" x="50" y="278.33333333333331" width="275" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="lT7-ib-FXj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idv-DJ-BMS">
+                                <rect key="frame" x="70" y="571" width="235" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="lgH-0L-TMQ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="누적 뽀모도로">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="30"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.76101781140000002" green="0.23916860710000001" blue="0.13172672520000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onBtnTimer:" destination="bH7-Bh-Hmr" eventType="touchUpInside" id="yPk-6o-8D2"/>
+                                    <segue destination="h3H-g7-kXN" kind="show" id="Pxa-hr-Kxu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Glc-zU-pON">
+                                <rect key="frame" x="70" y="641" width="235" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ia4-Vc-v5s"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="뽀모도로 랭킹">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="30"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.76101781140000002" green="0.23916860710000001" blue="0.13172672520000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onBtnTimer:" destination="bH7-Bh-Hmr" eventType="touchUpInside" id="hjS-1d-2e7"/>
+                                    <segue destination="lgb-qh-Vlq" kind="show" id="uRd-54-bR9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06M-Kn-1Hj">
+                                <rect key="frame" x="65.000000000000014" y="322.33333333333331" width="245.33333333333337" height="107.66666666666669"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="90"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="3H1-vV-mr4"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="idv-DJ-BMS" firstAttribute="centerY" secondItem="tKb-Pz-VF7" secondAttribute="centerY" constant="190" id="3YI-Al-Ihp"/>
+                            <constraint firstItem="idv-DJ-BMS" firstAttribute="trailing" secondItem="SPC-f5-qwR" secondAttribute="trailing" id="4Lg-Ir-u3v"/>
+                            <constraint firstItem="SPC-f5-qwR" firstAttribute="centerX" secondItem="tKb-Pz-VF7" secondAttribute="centerX" id="53g-Ue-s8M"/>
+                            <constraint firstItem="SPC-f5-qwR" firstAttribute="top" secondItem="3H1-vV-mr4" secondAttribute="top" constant="40" id="75n-S7-AgI"/>
+                            <constraint firstItem="YUg-PC-Vt1" firstAttribute="trailing" secondItem="SPC-f5-qwR" secondAttribute="trailing" id="EBM-Qr-qWs"/>
+                            <constraint firstItem="Glc-zU-pON" firstAttribute="trailing" secondItem="SPC-f5-qwR" secondAttribute="trailing" id="KYX-ry-mfO"/>
+                            <constraint firstItem="3H1-vV-mr4" firstAttribute="trailing" secondItem="ZuT-Vd-IqF" secondAttribute="trailing" constant="50" id="Kr5-2X-tG3"/>
+                            <constraint firstItem="Glc-zU-pON" firstAttribute="leading" secondItem="SPC-f5-qwR" secondAttribute="leading" id="PpT-tD-TdT"/>
+                            <constraint firstItem="YUg-PC-Vt1" firstAttribute="leading" secondItem="SPC-f5-qwR" secondAttribute="leading" id="QXy-3U-nFu"/>
+                            <constraint firstItem="YUg-PC-Vt1" firstAttribute="centerX" secondItem="tKb-Pz-VF7" secondAttribute="centerX" id="RCM-kK-N54"/>
+                            <constraint firstItem="YUg-PC-Vt1" firstAttribute="centerY" secondItem="tKb-Pz-VF7" secondAttribute="centerY" constant="120" id="SbJ-pW-nDE"/>
+                            <constraint firstItem="Glc-zU-pON" firstAttribute="centerY" secondItem="tKb-Pz-VF7" secondAttribute="centerY" constant="260" id="VqD-WL-9o2"/>
+                            <constraint firstItem="Glc-zU-pON" firstAttribute="centerX" secondItem="tKb-Pz-VF7" secondAttribute="centerX" id="Z6W-Ko-Nxg"/>
+                            <constraint firstItem="idv-DJ-BMS" firstAttribute="leading" secondItem="SPC-f5-qwR" secondAttribute="leading" id="ZcJ-5t-ZPz"/>
+                            <constraint firstItem="ZuT-Vd-IqF" firstAttribute="top" secondItem="SPC-f5-qwR" secondAttribute="bottom" constant="25" id="aUQ-m5-0N7"/>
+                            <constraint firstItem="SPC-f5-qwR" firstAttribute="leading" secondItem="3H1-vV-mr4" secondAttribute="leading" constant="70" id="e6C-Pa-wH4"/>
+                            <constraint firstItem="06M-Kn-1Hj" firstAttribute="centerY" secondItem="tKb-Pz-VF7" secondAttribute="centerY" constant="-30" id="eq2-6t-2L8"/>
+                            <constraint firstItem="3H1-vV-mr4" firstAttribute="trailing" secondItem="SPC-f5-qwR" secondAttribute="trailing" constant="70" id="kzd-aI-zfa"/>
+                            <constraint firstItem="06M-Kn-1Hj" firstAttribute="centerX" secondItem="tKb-Pz-VF7" secondAttribute="centerX" id="qGo-Cp-afO"/>
+                            <constraint firstItem="ZuT-Vd-IqF" firstAttribute="leading" secondItem="3H1-vV-mr4" secondAttribute="leading" constant="50" id="zRU-hK-Zxg"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="뽀모도로" image="timer" catalog="system" id="bqA-iM-l4t"/>
+                    <navigationItem key="navigationItem" id="QUb-Ns-I1k"/>
+                    <connections>
+                        <outlet property="timeLabel" destination="06M-Kn-1Hj" id="FF9-Sn-v1o"/>
+                        <outlet property="timerButton" destination="YUg-PC-Vt1" id="6qZ-kG-3t5"/>
+                        <outlet property="workTextField" destination="ZuT-Vd-IqF" id="PM6-cd-PDY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dGA-GC-ZZo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3668" y="903"/>
+            <point key="canvasLocation" x="5215.1999999999998" y="902.95566502463055"/>
+        </scene>
+        <!--Daily Pomodoro View Controller-->
+        <scene sceneID="Yep-KT-773">
+            <objects>
+                <viewController storyboardIdentifier="DailyPomodoroViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZRk-Tz-vXp" customClass="DailyPomodoroViewController" customModule="sequence" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jLE-Wq-Smq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="k8C-pf-b2p"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ikd-dT-zj5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3735" y="1623"/>
+        </scene>
+        <!--Weekly Pomodoro View Controller-->
+        <scene sceneID="gXg-95-AB3">
+            <objects>
+                <viewController storyboardIdentifier="WeeklyPomodoroViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GQm-aF-O4s" customClass="WeeklyPomodoroViewController" customModule="sequence" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7NE-ho-CYh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="7D1-8k-22o"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MMF-12-Ejd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4471" y="1623"/>
+        </scene>
+        <!--Ranking Pomodoro View Controller-->
+        <scene sceneID="SjJ-6l-X3R">
+            <objects>
+                <viewController id="lgb-qh-Vlq" customClass="RankingPomodoroViewController" customModule="sequence" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MiI-tm-tPL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="8XO-ab-xca"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="B1h-w0-SQZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kM7-hM-v2c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5215" y="1623"/>
+        </scene>
+        <!--Monthly Pomodoro View Controller-->
+        <scene sceneID="vTl-sE-tBU">
+            <objects>
+                <viewController storyboardIdentifier="MonthlyPomodoroViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aIC-OA-fGk" customClass="MonthlyPomodoroViewController" customModule="sequence" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9vv-Qi-52g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="nai-kQ-8PT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fyQ-P5-BTD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6023" y="1623"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mJc-9d-ixg">
+            <objects>
+                <viewController id="h3H-g7-kXN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lod-pp-BlB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ew7-3n-Vfk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JwQ-L7-h2P"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LpS-hm-QkY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5991.1999999999998" y="902.95566502463055"/>
         </scene>
         <!--Project View Controller-->
         <scene sceneID="53X-qz-A8X">
@@ -498,7 +705,7 @@
         <!--게시판-->
         <scene sceneID="ahz-Cn-Tu8">
             <objects>
-                <viewController storyboardIdentifier="InformationSharingController" id="Uz3-vG-gvn" customClass="BoardViewController" customModule="sequence" sceneMemberID="viewController">
+                <viewController id="Uz3-vG-gvn" customClass="BoardViewController" customModule="sequence" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ihu-AN-ekL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -524,7 +731,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rcz-rt-aMl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2730" y="903"/>
+            <point key="canvasLocation" x="2728.8000000000002" y="902.95566502463055"/>
         </scene>
         <!--공지사항-->
         <scene sceneID="O8m-N7-A9C">
@@ -742,7 +949,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="HvA-br-lfc" kind="relationship" relationship="viewControllers" id="MeN-LG-A1q"/>
-                        <segue destination="bH7-Bh-Hmr" kind="relationship" relationship="viewControllers" id="a4N-p3-1Ud"/>
+                        <segue destination="ToO-sV-a7b" kind="relationship" relationship="viewControllers" id="a4N-p3-1Ud"/>
                         <segue destination="Uz3-vG-gvn" kind="relationship" relationship="viewControllers" id="k7p-0M-68E"/>
                         <segue destination="Pg9-wo-a9c" kind="relationship" relationship="viewControllers" id="Zzi-8d-vsv"/>
                     </connections>
@@ -770,12 +977,32 @@
             </objects>
             <point key="canvasLocation" x="4472" y="96"/>
         </scene>
+        <!--뽀모도로-->
+        <scene sceneID="HxS-6S-ucC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ToO-sV-a7b" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="뽀모도로" image="timer" catalog="system" id="bqA-iM-l4t"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yGr-aW-J2b">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bH7-Bh-Hmr" kind="relationship" relationship="rootViewController" id="KVD-fT-xOw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vdK-8c-cIU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4272.8000000000002" y="902.95566502463055"/>
+        </scene>
     </scenes>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="list.bullet.rectangle" catalog="system" width="128" height="93"/>
         <image name="megaphone" catalog="system" width="128" height="111"/>
+        <image name="pomodoro" width="512" height="512"/>
         <image name="sequence" width="1000" height="250"/>
         <image name="timer" catalog="system" width="128" height="121"/>
         <image name="이메일" width="512" height="512"/>
