@@ -10,7 +10,7 @@ import Tabman
 import Pageboy
 
 
-class BoardViewController: TabmanViewController {
+class BoardViewController: TabmanViewController, PageboyViewControllerDataSource, TMBarDataSource {
 
     private var vcArr: Array<UIViewController> = []
     
@@ -39,9 +39,6 @@ class BoardViewController: TabmanViewController {
         
     }
     
-}
-
-extension BoardViewController: PageboyViewControllerDataSource, TMBarDataSource {
     func barItem(for bar: TMBar, at index: Int) -> TMBarItemable {
         
         switch index {
@@ -68,6 +65,9 @@ extension BoardViewController: PageboyViewControllerDataSource, TMBarDataSource 
     func defaultPage(for pageboyViewController: PageboyViewController) -> PageboyViewController.Page? {
         return nil
     }
+    
 }
+
+
     
 
