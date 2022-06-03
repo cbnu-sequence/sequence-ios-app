@@ -15,8 +15,11 @@ class PomodoroViewController: UIViewController {
     
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var timerButton: UIButton!
+    @IBOutlet weak var showPomodoroBtn: UIButton!
+    @IBOutlet weak var pomodoroRankingBtn: UIButton!
     @IBOutlet weak var workTextField: UITextField!
-    //var pomodoroResponse: Array<PomodoroStartData> = []
+    @IBOutlet weak var alertLabel: UILabel!
+    var id: String = ""
     
     var secondsLeft: Int = 10
     var timer: Timer?
@@ -25,6 +28,8 @@ class PomodoroViewController: UIViewController {
         super.viewDidLoad()
         
         self.updateTimeLeft()
+        self.buttonLayout(isOn: false)
+       
 
     }
     
@@ -84,7 +89,7 @@ class PomodoroViewController: UIViewController {
                     return
                 }
                 
-                let title : String = ""
+                
                 let pomodoroStartDate = currentTime()
 
                 
@@ -96,14 +101,18 @@ class PomodoroViewController: UIViewController {
                 let url = "http://localhost:8879/pomodoro"
                 let dataRequest = AF.request(url, method: .post, parameters: pomodoroStartData, encoding: JSONEncoding.default)
                 // 서버 응답 처리
-                dataRequest.validate().responseData { response in
+                dataRequest.validate().responseJSON { response in
                         switch response.result {
                                 case .success(let obj):
                             do {
                                 let dataJSON = try JSONSerialization.data(withJSONObject:obj, options: .prettyPrinted)
                                 let getData = try JSONDecoder().decode(PomodoroResponse.self, from: dataJSON)
-                                print(getData)
-                             //   var pomodoroResponse : PomodoroResponse = getData.data
+                            
+                                var pomodoroResponse: PomodoroStartData = getData.data
+                                print(pomodoroResponse)
+                                
+                                self.id = (pomodoroResponse._id)!
+                                print(self.id)
                                 
                                 
                             } catch(let error) {
@@ -129,25 +138,25 @@ class PomodoroViewController: UIViewController {
                     if self.secondsLeft == 0 {
                         self.resetTimer()
                         
-//                        let pomodoroEndDate = self.currentTime()
-//                        let id = pomodoroResponse
-//
-//                        let pomodoroEndData = ["date": pomodoroEndDate] as [String : Any]
-//                        // 요기에 제목이랑 현재시각 보내기
-//
-//                // API 호출
-//                        let url = "http://localhost:8879/pomodoro/ "
-//                        let dataRequest = AF.request(url, method: .post, parameters: pomodoroEndData, encoding: JSONEncoding.default)
-//                        // 서버 응답 처리
-//                        dataRequest.validate().responseData { response in
-//                                switch response.result {
-//                                        case .success:
-//                                    print("success")
-//                                        case let .failure(error):
-//                                            print(error)
-//                                        }
-//                                }
+                        let pomodoroEndDate = self.currentTime()
                         
+
+                        let pomodoroEndData = ["date": pomodoroEndDate] as [String : Any]
+                        // 요기에 제목이랑 현재시각 보내기
+
+                // API 호출
+                        let url = "http://localhost:8879/pomodoro/\(self.id)"
+                        let dataRequest = AF.request(url, method: .post, parameters: pomodoroEndData, encoding: JSONEncoding.default)
+                        // 서버 응답 처리
+                        dataRequest.validate().responseData { response in
+                                switch response.result {
+                                        case .success:
+                                    print("success")
+                                        case let .failure(error):
+                                            print(error)
+                                        }
+                                }
+
                         //요기에 서버에 현재시각 보내기
                         
                     }
@@ -157,8 +166,32 @@ class PomodoroViewController: UIViewController {
     
     @IBAction func onBtnShowPomodoro(_ sender: UIButton) {
     }
-
-}
     
 
+    @IBAction func editChanged(_ sender: UITextField) {
+        
+        if sender.text?.isEmpty == true {
+            self.buttonLayout(isOn: false)
+  
+        } else {
+            self.buttonLayout(isOn: true)
+        }
+    }
+    
+    func buttonLayout(isOn: Bool) {
+        switch isOn {
+        case true:
+            timerButton.isUserInteractionEnabled = true
+            alertLabel.text = ""
+
+        case false:
+            timerButton.isUserInteractionEnabled = false
+            alertLabel.textColor = .red
+            alertLabel.text = "25분동안 할 일을 입력해주세요."
+   
+        }
+    
+    }
+    
+}
 
