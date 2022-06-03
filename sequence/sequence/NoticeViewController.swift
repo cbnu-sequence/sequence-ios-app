@@ -14,10 +14,10 @@ import KakaoSDKUser
 class NoticeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
 
-    
     var page = 1
     var noticeData: Array<Notice> = []
     var fetchingMore : Bool = false
+    var sliced_createdAt: String = ""
     
     
     @IBOutlet weak var noticeTableView: UITableView!
@@ -30,10 +30,6 @@ class NoticeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // 테이블 뷰의 데이터소스 처리
         noticeTableView.dataSource = self
         
-        //scrollViewDidScroll
-     
-        
-
      
     }
     
@@ -60,8 +56,7 @@ class NoticeViewController: UIViewController, UITableViewDelegate, UITableViewDa
                    for i in 0 ..< getData.data.count {
                        self.noticeData.append(getData.data[i])
                    }
-                   
-                   
+
                    DispatchQueue.main.async {
                        self.noticeTableView.reloadData()
                    }
@@ -76,22 +71,39 @@ class NoticeViewController: UIViewController, UITableViewDelegate, UITableViewDa
            }
    }
     
+
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.noticeData.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        
+
         let cell = self.noticeTableView.dequeueReusableCell(withIdentifier: "NoticeCell", for: indexPath) as! NoticeTableViewCell
         
         let notice: Notice = self.noticeData[indexPath.row]
-        cell.dateLabel?.text = notice.createdAt
+        
+        
+        //배포하기 전에 여기 한번 더 신경쓰기
+        if notice != nil {
+        let createdAtStr = notice.createdAt
+        let startIndex = createdAtStr!.index(createdAtStr!.startIndex, offsetBy: 0)
+        let endIndex = createdAtStr!.index(createdAtStr!.startIndex, offsetBy: 10)
+            self.sliced_createdAt = String(createdAtStr![startIndex ..< endIndex])
+        print(sliced_createdAt)
+        
+        cell.dateLabel?.text = String(sliced_createdAt)
         cell.titleLabel.text = notice.title
 
-
-        return cell
+            
+        } else {
+            print("nil")
+            
+        }
         
+        return cell
+    
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -111,7 +123,7 @@ class NoticeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         vc.titletext = notice.title!
         vc.nametext = (notice.writer?.name)!
         vc.contenttext = notice.content!
-        vc.datetext = notice.createdAt!
+        vc.datetext = String(sliced_createdAt)
         
         self.navigationController?.pushViewController(vc, animated: true)
     
