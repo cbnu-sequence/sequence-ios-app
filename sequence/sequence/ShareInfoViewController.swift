@@ -9,33 +9,6 @@ import UIKit
 import SwiftUI
 import WebKit
 
-/*struct ShareInfoViewController: UIViewRepresentable {
-    var urlToLoad: String
-    
-    func makeUIView(context: Context) -> WKWebView {
-        
-        guard let url = URL(string: self.urlToLoad) else {
-            return WKWebView()
-        }
-        
-        let webview = WKWebView()
-        
-        webview.load(URLRequest(url: url))
-        
-        return webview
-    }
-    
-    func updateUIView(_ uiView: WKWebView, context: UIViewRepresentableContext<ShareInfoViewController>) {
-        
-    }
-}
-
-struct ShareInfoViewController_Previews: PreviewProvider {
-    static var previews: some View {
-        ShareInfoViewController(urlToLoad: "http://localhost:3000/board/sharingInfo")
-    }
-}*/
-
 class ShareInfoViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
 
     @IBOutlet weak var webView: WKWebView!
@@ -51,7 +24,7 @@ class ShareInfoViewController: UIViewController, WKUIDelegate, WKNavigationDeleg
         override func viewDidLoad() {
             super.viewDidLoad()
            
-            let url = URL(string: "http://localhost:3000/board/sharingInfo")
+            let url = URL(string: "http://localhost:3000/board/sharinginfo")
             let request = URLRequest(url: url!)
             //self.webView?.allowsBackForwardNavigationGestures = true  //뒤로가기 제스쳐 허용
             webView.configuration.preferences.javaScriptEnabled = true  //자바스크립트 활성화
@@ -80,16 +53,5 @@ class ShareInfoViewController: UIViewController, WKUIDelegate, WKNavigationDeleg
             if navigationAction.targetFrame == nil { webView.load(navigationAction.request) }
             return nil }
         
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

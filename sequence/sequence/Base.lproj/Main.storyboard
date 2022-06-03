@@ -473,13 +473,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pomodoro" translatesAutoresizingMaskIntoConstraints="NO" id="SPC-f5-qwR">
-                                <rect key="frame" x="70" y="128" width="235" height="125.33333333333331"/>
+                                <rect key="frame" x="70" y="118" width="235" height="125.33333333333331"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="SPC-f5-qwR" secondAttribute="height" multiplier="15:8" id="JWc-4t-mei"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUg-PC-Vt1">
-                                <rect key="frame" x="70" y="501" width="235" height="50"/>
+                                <rect key="frame" x="70" y="491" width="235" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="tdu-J9-eHb"/>
                                 </constraints>
@@ -505,15 +505,18 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="25분동안 할 일을 입력해주세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZuT-Vd-IqF">
-                                <rect key="frame" x="50" y="278.33333333333331" width="275" height="40"/>
+                                <rect key="frame" x="50" y="268.33333333333331" width="275" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="lT7-ib-FXj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="editChanged:" destination="bH7-Bh-Hmr" eventType="editingChanged" id="r0P-dw-qJX"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idv-DJ-BMS">
-                                <rect key="frame" x="70" y="571" width="235" height="50"/>
+                                <rect key="frame" x="70" y="561" width="235" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="lgH-0L-TMQ"/>
                                 </constraints>
@@ -535,12 +538,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="onBtnTimer:" destination="bH7-Bh-Hmr" eventType="touchUpInside" id="yPk-6o-8D2"/>
                                     <segue destination="h3H-g7-kXN" kind="show" id="Pxa-hr-Kxu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Glc-zU-pON">
-                                <rect key="frame" x="70" y="641" width="235" height="50"/>
+                                <rect key="frame" x="70" y="631" width="235" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ia4-Vc-v5s"/>
                                 </constraints>
@@ -562,12 +564,17 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="onBtnTimer:" destination="bH7-Bh-Hmr" eventType="touchUpInside" id="hjS-1d-2e7"/>
                                     <segue destination="lgb-qh-Vlq" kind="show" id="uRd-54-bR9"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ㅇㄹㄴ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0NZ-VE-q4e">
+                                <rect key="frame" x="70" y="471.66666666666669" width="235" height="14.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06M-Kn-1Hj">
-                                <rect key="frame" x="65.000000000000014" y="322.33333333333331" width="245.33333333333337" height="107.66666666666669"/>
+                                <rect key="frame" x="10" y="312" width="355" height="108"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="90"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -577,30 +584,38 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="idv-DJ-BMS" firstAttribute="centerY" secondItem="tKb-Pz-VF7" secondAttribute="centerY" constant="190" id="3YI-Al-Ihp"/>
+                            <constraint firstItem="idv-DJ-BMS" firstAttribute="centerY" secondItem="tKb-Pz-VF7" secondAttribute="centerY" constant="180" id="3YI-Al-Ihp"/>
                             <constraint firstItem="idv-DJ-BMS" firstAttribute="trailing" secondItem="SPC-f5-qwR" secondAttribute="trailing" id="4Lg-Ir-u3v"/>
                             <constraint firstItem="SPC-f5-qwR" firstAttribute="centerX" secondItem="tKb-Pz-VF7" secondAttribute="centerX" id="53g-Ue-s8M"/>
-                            <constraint firstItem="SPC-f5-qwR" firstAttribute="top" secondItem="3H1-vV-mr4" secondAttribute="top" constant="40" id="75n-S7-AgI"/>
+                            <constraint firstItem="0NZ-VE-q4e" firstAttribute="leading" secondItem="YUg-PC-Vt1" secondAttribute="leading" id="5Nd-hs-2PF"/>
+                            <constraint firstItem="SPC-f5-qwR" firstAttribute="top" secondItem="3H1-vV-mr4" secondAttribute="top" constant="30" id="75n-S7-AgI"/>
+                            <constraint firstItem="06M-Kn-1Hj" firstAttribute="leading" secondItem="3H1-vV-mr4" secondAttribute="leading" constant="10" id="C9U-Ho-5v2"/>
                             <constraint firstItem="YUg-PC-Vt1" firstAttribute="trailing" secondItem="SPC-f5-qwR" secondAttribute="trailing" id="EBM-Qr-qWs"/>
+                            <constraint firstItem="YUg-PC-Vt1" firstAttribute="top" secondItem="0NZ-VE-q4e" secondAttribute="bottom" constant="5" id="KV9-dM-brB"/>
                             <constraint firstItem="Glc-zU-pON" firstAttribute="trailing" secondItem="SPC-f5-qwR" secondAttribute="trailing" id="KYX-ry-mfO"/>
                             <constraint firstItem="3H1-vV-mr4" firstAttribute="trailing" secondItem="ZuT-Vd-IqF" secondAttribute="trailing" constant="50" id="Kr5-2X-tG3"/>
                             <constraint firstItem="Glc-zU-pON" firstAttribute="leading" secondItem="SPC-f5-qwR" secondAttribute="leading" id="PpT-tD-TdT"/>
+                            <constraint firstItem="3H1-vV-mr4" firstAttribute="trailing" secondItem="06M-Kn-1Hj" secondAttribute="trailing" constant="10" id="Q9v-u9-Kl5"/>
                             <constraint firstItem="YUg-PC-Vt1" firstAttribute="leading" secondItem="SPC-f5-qwR" secondAttribute="leading" id="QXy-3U-nFu"/>
                             <constraint firstItem="YUg-PC-Vt1" firstAttribute="centerX" secondItem="tKb-Pz-VF7" secondAttribute="centerX" id="RCM-kK-N54"/>
-                            <constraint firstItem="YUg-PC-Vt1" firstAttribute="centerY" secondItem="tKb-Pz-VF7" secondAttribute="centerY" constant="120" id="SbJ-pW-nDE"/>
-                            <constraint firstItem="Glc-zU-pON" firstAttribute="centerY" secondItem="tKb-Pz-VF7" secondAttribute="centerY" constant="260" id="VqD-WL-9o2"/>
+                            <constraint firstItem="YUg-PC-Vt1" firstAttribute="centerY" secondItem="tKb-Pz-VF7" secondAttribute="centerY" constant="110" id="SbJ-pW-nDE"/>
+                            <constraint firstItem="0NZ-VE-q4e" firstAttribute="trailing" secondItem="YUg-PC-Vt1" secondAttribute="trailing" id="VPc-Ng-jCg"/>
+                            <constraint firstItem="Glc-zU-pON" firstAttribute="centerY" secondItem="tKb-Pz-VF7" secondAttribute="centerY" constant="250" id="VqD-WL-9o2"/>
                             <constraint firstItem="Glc-zU-pON" firstAttribute="centerX" secondItem="tKb-Pz-VF7" secondAttribute="centerX" id="Z6W-Ko-Nxg"/>
                             <constraint firstItem="idv-DJ-BMS" firstAttribute="leading" secondItem="SPC-f5-qwR" secondAttribute="leading" id="ZcJ-5t-ZPz"/>
                             <constraint firstItem="ZuT-Vd-IqF" firstAttribute="top" secondItem="SPC-f5-qwR" secondAttribute="bottom" constant="25" id="aUQ-m5-0N7"/>
                             <constraint firstItem="SPC-f5-qwR" firstAttribute="leading" secondItem="3H1-vV-mr4" secondAttribute="leading" constant="70" id="e6C-Pa-wH4"/>
-                            <constraint firstItem="06M-Kn-1Hj" firstAttribute="centerY" secondItem="tKb-Pz-VF7" secondAttribute="centerY" constant="-30" id="eq2-6t-2L8"/>
+                            <constraint firstItem="06M-Kn-1Hj" firstAttribute="centerX" secondItem="tKb-Pz-VF7" secondAttribute="centerX" id="iOs-C3-idd"/>
                             <constraint firstItem="3H1-vV-mr4" firstAttribute="trailing" secondItem="SPC-f5-qwR" secondAttribute="trailing" constant="70" id="kzd-aI-zfa"/>
-                            <constraint firstItem="06M-Kn-1Hj" firstAttribute="centerX" secondItem="tKb-Pz-VF7" secondAttribute="centerX" id="qGo-Cp-afO"/>
+                            <constraint firstItem="06M-Kn-1Hj" firstAttribute="centerY" secondItem="tKb-Pz-VF7" secondAttribute="centerY" constant="-40" id="nMN-9r-kZO"/>
                             <constraint firstItem="ZuT-Vd-IqF" firstAttribute="leading" secondItem="3H1-vV-mr4" secondAttribute="leading" constant="50" id="zRU-hK-Zxg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QUb-Ns-I1k"/>
                     <connections>
+                        <outlet property="alertLabel" destination="0NZ-VE-q4e" id="8xL-JU-ueQ"/>
+                        <outlet property="pomodoroRankingBtn" destination="Glc-zU-pON" id="QLQ-Px-Ymi"/>
+                        <outlet property="showPomodoroBtn" destination="idv-DJ-BMS" id="tvV-F5-pCL"/>
                         <outlet property="timeLabel" destination="06M-Kn-1Hj" id="FF9-Sn-v1o"/>
                         <outlet property="timerButton" destination="YUg-PC-Vt1" id="6qZ-kG-3t5"/>
                         <outlet property="workTextField" destination="ZuT-Vd-IqF" id="PM6-cd-PDY"/>
@@ -608,7 +623,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dGA-GC-ZZo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5215.1999999999998" y="902.95566502463055"/>
+            <point key="canvasLocation" x="5481" y="903"/>
         </scene>
         <!--Daily Pomodoro View Controller-->
         <scene sceneID="Yep-KT-773">
@@ -623,7 +638,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ikd-dT-zj5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3735" y="1623"/>
+            <point key="canvasLocation" x="3735" y="1750"/>
         </scene>
         <!--Weekly Pomodoro View Controller-->
         <scene sceneID="gXg-95-AB3">
@@ -638,7 +653,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MMF-12-Ejd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4471" y="1623"/>
+            <point key="canvasLocation" x="4471" y="1750"/>
         </scene>
         <!--Ranking Pomodoro View Controller-->
         <scene sceneID="SjJ-6l-X3R">
@@ -654,7 +669,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kM7-hM-v2c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5215" y="1623"/>
+            <point key="canvasLocation" x="5215" y="1750"/>
         </scene>
         <!--Monthly Pomodoro View Controller-->
         <scene sceneID="vTl-sE-tBU">
@@ -669,7 +684,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fyQ-P5-BTD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6023" y="1623"/>
+            <point key="canvasLocation" x="6054" y="1750"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="mJc-9d-ixg">
@@ -685,7 +700,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LpS-hm-QkY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5991.1999999999998" y="902.95566502463055"/>
+            <point key="canvasLocation" x="6609" y="902"/>
         </scene>
         <!--Project View Controller-->
         <scene sceneID="53X-qz-A8X">
@@ -695,9 +710,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dZp-jT-fza">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <wkWebView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dZp-jT-fza">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -707,6 +721,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tVn-yO-EAA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dZp-jT-fza" firstAttribute="centerY" secondItem="tVn-yO-EAA" secondAttribute="centerY" id="Ldz-Vf-yc0"/>
+                            <constraint firstItem="dZp-jT-fza" firstAttribute="width" secondItem="tVn-yO-EAA" secondAttribute="width" id="PSx-bS-UcN"/>
+                            <constraint firstItem="dZp-jT-fza" firstAttribute="centerX" secondItem="tVn-yO-EAA" secondAttribute="centerX" id="UGt-6R-gJ5"/>
+                            <constraint firstItem="dZp-jT-fza" firstAttribute="height" secondItem="tVn-yO-EAA" secondAttribute="height" multiplier="1.02316" id="kqj-rS-DBx"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="webView" destination="dZp-jT-fza" id="Al6-dk-SNz"/>
@@ -714,7 +734,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Jt-y0-BcL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1289.8550724637682" y="902.67857142857133"/>
+            <point key="canvasLocation" x="1288.8" y="902.21674876847294"/>
         </scene>
         <!--게시판-->
         <scene sceneID="ahz-Cn-Tu8">
@@ -740,9 +760,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HwZ-n8-aHT">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HwZ-n8-aHT">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -752,6 +771,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Mht-Gj-pfo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HwZ-n8-aHT" firstAttribute="height" secondItem="Mht-Gj-pfo" secondAttribute="height" id="BIX-QZ-VoG"/>
+                            <constraint firstItem="HwZ-n8-aHT" firstAttribute="width" secondItem="Mht-Gj-pfo" secondAttribute="width" id="Vx5-aF-Ctr"/>
+                            <constraint firstItem="HwZ-n8-aHT" firstAttribute="centerX" secondItem="Mht-Gj-pfo" secondAttribute="centerX" id="lDI-Il-GAd"/>
+                            <constraint firstItem="HwZ-n8-aHT" firstAttribute="centerY" secondItem="Mht-Gj-pfo" secondAttribute="centerY" id="yO3-q5-UPW"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="webView" destination="HwZ-n8-aHT" id="Y6m-aR-iSi"/>
@@ -760,7 +785,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rcz-rt-aMl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2728.8000000000002" y="902.95566502463055"/>
-            <point key="canvasLocation" x="2728.985507246377" y="902.67857142857133"/>
         </scene>
         <!--공지사항-->
         <scene sceneID="O8m-N7-A9C">
