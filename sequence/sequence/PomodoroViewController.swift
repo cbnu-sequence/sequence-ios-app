@@ -98,7 +98,7 @@ class PomodoroViewController: UIViewController {
 
         
         // API 호출
-                let url = "http://localhost:8879/pomodoro"
+                let url = "\(Config.appURL)/pomodoro"
                 let dataRequest = AF.request(url, method: .post, parameters: pomodoroStartData, encoding: JSONEncoding.default)
                 // 서버 응답 처리
                 dataRequest.validate().responseJSON { response in
@@ -143,7 +143,7 @@ class PomodoroViewController: UIViewController {
 
 
                 // API 호출
-                        let url = "http://localhost:8879/pomodoro/\(self.id)"
+                        let url = "\(Config.appURL)/pomodoro/\(self.id)"
                         let dataRequest = AF.request(url, method: .post, parameters: pomodoroEndData, encoding: JSONEncoding.default)
                         // 서버 응답 처리
                         dataRequest.validate().responseData { response in

@@ -662,7 +662,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="타이머 시작">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="30"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" red="0.43921568989999998" green="0.66666668650000005" blue="0.24313727020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.76101781140000002" green="0.23916860710000001" blue="0.13172672520000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">

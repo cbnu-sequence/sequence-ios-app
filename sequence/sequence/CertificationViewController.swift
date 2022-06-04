@@ -22,7 +22,7 @@ class CertificationViewController: UIViewController {
     @IBAction func onBtnResend(_ sender: UIButton) {
         
         
-        let url = "http://localhost:8879/auth/mail"
+        let url = "\(Config.appURL)/auth/mail"
         let dataRequest = AF.request(url, method: .post, encoding: JSONEncoding.default)
         // 서버 응답 처리
         dataRequest.validate().responseData { response in
@@ -44,7 +44,7 @@ class CertificationViewController: UIViewController {
         
         let token = ["token":self.certificationNumTextField.text!]
         
-        let url = "http://localhost:8879/auth/valid"
+        let url = "\(Config.appURL)/auth/valid"
         let dataRequest = AF.request(url, method: .post, parameters: token, encoding: JSONEncoding.default)
         // 서버 응답 처리
         dataRequest.validate().responseData { response in
