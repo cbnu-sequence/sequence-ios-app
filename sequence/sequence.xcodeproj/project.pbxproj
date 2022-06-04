@@ -23,6 +23,7 @@
 		0CBBBF8927E95A430011BB86 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBBBF8827E95A430011BB86 /* JoinViewController.swift */; };
 		0CD2F5A528463FEE00C47167 /* PomodoroData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD2F5A428463FEE00C47167 /* PomodoroData.swift */; };
 		0CE10CA5283779BA00D08F83 /* ShowNoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE10CA4283779BA00D08F83 /* ShowNoticeViewController.swift */; };
+		0CEDBB0E284A4E4A007B4679 /* RestTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEDBB0D284A4E4A007B4679 /* RestTimeViewController.swift */; };
 		0CF0060428332BDF00E0FDA6 /* ShareInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0060328332BDF00E0FDA6 /* ShareInfoViewController.swift */; };
 		0CF0060628332BEA00E0FDA6 /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0060528332BEA00E0FDA6 /* ProjectViewController.swift */; };
 		0CF0060C2833793B00E0FDA6 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0060B2833793B00E0FDA6 /* Setting.swift */; };
@@ -54,6 +55,7 @@
 		0CBBBF8827E95A430011BB86 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		0CD2F5A428463FEE00C47167 /* PomodoroData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroData.swift; sourceTree = "<group>"; };
 		0CE10CA4283779BA00D08F83 /* ShowNoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowNoticeViewController.swift; sourceTree = "<group>"; };
+		0CEDBB0D284A4E4A007B4679 /* RestTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestTimeViewController.swift; sourceTree = "<group>"; };
 		0CF0060328332BDF00E0FDA6 /* ShareInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareInfoViewController.swift; sourceTree = "<group>"; };
 		0CF0060528332BEA00E0FDA6 /* ProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
 		0CF0060B2833793B00E0FDA6 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				0CF5B3CC28474972009C303A /* WeeklyPomodoroViewController.swift */,
 				0CF5B3CE284749B6009C303A /* MonthlyPomodoroViewController.swift */,
 				0CF5B3CA2847495B009C303A /* DailyPomodoroViewController.swift */,
+				0CEDBB0D284A4E4A007B4679 /* RestTimeViewController.swift */,
 				0CD2F5A428463FEE00C47167 /* PomodoroData.swift */,
 				0C0BCD8028071E14002F4745 /* BoardViewController.swift */,
 				0CF0060328332BDF00E0FDA6 /* ShareInfoViewController.swift */,
@@ -263,6 +266,7 @@
 				0C3F70CF27E0845300BE37EE /* ViewController.swift in Sources */,
 				0CF0060428332BDF00E0FDA6 /* ShareInfoViewController.swift in Sources */,
 				0CF5B3CD28474972009C303A /* WeeklyPomodoroViewController.swift in Sources */,
+				0CEDBB0E284A4E4A007B4679 /* RestTimeViewController.swift in Sources */,
 				0C3F70CB27E0845300BE37EE /* AppDelegate.swift in Sources */,
 				0C9F43BA27F5831900A1931C /* CertificationViewController.swift in Sources */,
 				0CAD18C228321C64008E4265 /* NoticeTableViewCell.swift in Sources */,

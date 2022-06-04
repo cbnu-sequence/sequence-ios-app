@@ -11,6 +11,7 @@ import Alamofire
 import KakaoSDKCommon
 import KakaoSDKUser
 
+
 class PomodoroViewController: UIViewController {
     
     @IBOutlet weak var timeLabel: UILabel!
@@ -91,11 +92,10 @@ class PomodoroViewController: UIViewController {
                 
                 
                 let pomodoroStartDate = currentTime()
-
-                
+        
                 let pomodoroStartData = ["title": self.workTextField.text,
                                     "date": pomodoroStartDate] as [String : Any]
-                // 요기에 제목이랑 현재시각 보내기
+
         
         // API 호출
                 let url = "http://localhost:8879/pomodoro"
@@ -109,11 +109,9 @@ class PomodoroViewController: UIViewController {
                                 let getData = try JSONDecoder().decode(PomodoroResponse.self, from: dataJSON)
                             
                                 var pomodoroResponse: PomodoroStartData = getData.data
-                                print(pomodoroResponse)
                                 
                                 self.id = (pomodoroResponse._id)!
                                 print(self.id)
-                                
                                 
                             } catch(let error) {
                                 print(error)
@@ -142,7 +140,7 @@ class PomodoroViewController: UIViewController {
                         
 
                         let pomodoroEndData = ["date": pomodoroEndDate] as [String : Any]
-                        // 요기에 제목이랑 현재시각 보내기
+
 
                 // API 호출
                         let url = "http://localhost:8879/pomodoro/\(self.id)"
@@ -157,8 +155,6 @@ class PomodoroViewController: UIViewController {
                                         }
                                 }
 
-                        //요기에 서버에 현재시각 보내기
-                        
                     }
                 }
             }
@@ -194,4 +190,5 @@ class PomodoroViewController: UIViewController {
     }
     
 }
+
 
