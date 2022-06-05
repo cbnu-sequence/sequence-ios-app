@@ -90,8 +90,8 @@ class NoticeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let createdAtStr = notice.createdAt
         let startIndex = createdAtStr!.index(createdAtStr!.startIndex, offsetBy: 0)
         let endIndex = createdAtStr!.index(createdAtStr!.startIndex, offsetBy: 10)
-            self.sliced_createdAt = String(createdAtStr![startIndex ..< endIndex])
-        print(sliced_createdAt)
+        self.sliced_createdAt = String(createdAtStr![startIndex ..< endIndex])
+        
         
         cell.dateLabel?.text = String(sliced_createdAt)
         cell.titleLabel.text = notice.title

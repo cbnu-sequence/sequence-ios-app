@@ -50,6 +50,6 @@ struct Config {
         (Bundle.main.infoDictionary?["KAKAO_SDK_KEY"] as? String) ?? ""
     }
     static var webviewURL: String{
-        (Bundle.main.infoDictionary?["WEBVIEW_KEY"] as? String) ?? ""
+        (Bundle.main.infoDictionary?["WEBVIEW_URL"] as? String) ?? ""
     }
 }
