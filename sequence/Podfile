@@ -9,6 +9,6 @@ target 'sequence' do
 
   pod 'Tabman', '~> 2.9'
   pod 'KakaoSDK', '~> 2.9.0'
-
+ # pod 'NMapsMap', '~>3.10.0'
 
 end

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class MainPageViewController: UIViewController, UITabBarControllerDelegate {
 
@@ -14,7 +15,14 @@ class MainPageViewController: UIViewController, UITabBarControllerDelegate {
         
     }
 
-
+    @IBAction func routingGithub(_ sender: UIButton) {
+        
+        let githubUrl = NSURL(string: "https://github.com/cbnu-sequence")
+        let githubSafariView: SFSafariViewController = SFSafariViewController(url: githubUrl as! URL)
+        self.present(githubSafariView, animated: true, completion: nil)
+        
+    }
+    
 }
 
 
