@@ -733,7 +733,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dGA-GC-ZZo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6553.6231884057979" y="931.47321428571422"/>
+            <point key="canvasLocation" x="5119" y="1381"/>
         </scene>
         <!--Rest Time View Controller-->
         <scene sceneID="IMM-Bj-fDG">
@@ -812,7 +812,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MDI-Jb-m0F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7350.7246376811599" y="1239.5089285714284"/>
+            <point key="canvasLocation" x="5958" y="1381"/>
         </scene>
         <!--Daily Pomodoro View Controller-->
         <scene sceneID="Yep-KT-773">
@@ -821,13 +821,32 @@
                     <view key="view" contentMode="scaleToFill" id="jLE-Wq-Smq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TEg-Xh-GqX">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="k8C-pf-b2p"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="k8C-pf-b2p" firstAttribute="trailing" secondItem="TEg-Xh-GqX" secondAttribute="trailing" id="TsG-nU-oGb"/>
+                            <constraint firstItem="k8C-pf-b2p" firstAttribute="bottom" secondItem="TEg-Xh-GqX" secondAttribute="bottom" id="fCi-rA-GPn"/>
+                            <constraint firstItem="TEg-Xh-GqX" firstAttribute="leading" secondItem="k8C-pf-b2p" secondAttribute="leading" id="hj6-z2-cDk"/>
+                            <constraint firstItem="TEg-Xh-GqX" firstAttribute="top" secondItem="k8C-pf-b2p" secondAttribute="top" id="i7I-lH-Z4b"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="TEg-Xh-GqX" id="eG7-im-omm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ikd-dT-zj5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3735" y="1750"/>
+            <point key="canvasLocation" x="3641" y="2265"/>
         </scene>
         <!--Weekly Pomodoro View Controller-->
         <scene sceneID="gXg-95-AB3">
@@ -836,13 +855,32 @@
                     <view key="view" contentMode="scaleToFill" id="7NE-ho-CYh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQj-d7-7kj">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="7D1-8k-22o"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zQj-d7-7kj" firstAttribute="top" secondItem="7D1-8k-22o" secondAttribute="top" id="Xp4-7h-3dw"/>
+                            <constraint firstItem="7D1-8k-22o" firstAttribute="trailing" secondItem="zQj-d7-7kj" secondAttribute="trailing" id="dPP-G2-x41"/>
+                            <constraint firstItem="zQj-d7-7kj" firstAttribute="leading" secondItem="7D1-8k-22o" secondAttribute="leading" id="oLd-fv-7VB"/>
+                            <constraint firstItem="7D1-8k-22o" firstAttribute="bottom" secondItem="zQj-d7-7kj" secondAttribute="bottom" id="rHa-94-ZSg"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="zQj-d7-7kj" id="T2b-le-Tix"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MMF-12-Ejd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4471" y="1750"/>
+            <point key="canvasLocation" x="4375" y="2265"/>
         </scene>
         <!--Ranking Pomodoro View Controller-->
         <scene sceneID="SjJ-6l-X3R">
@@ -858,7 +896,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kM7-hM-v2c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5215" y="1750"/>
+            <point key="canvasLocation" x="5120" y="2265"/>
         </scene>
         <!--Monthly Pomodoro View Controller-->
         <scene sceneID="vTl-sE-tBU">
@@ -867,13 +905,32 @@
                     <view key="view" contentMode="scaleToFill" id="9vv-Qi-52g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g0M-eO-Bp7">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="nai-kQ-8PT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nai-kQ-8PT" firstAttribute="bottom" secondItem="g0M-eO-Bp7" secondAttribute="bottom" id="0Ih-i2-4KP"/>
+                            <constraint firstItem="nai-kQ-8PT" firstAttribute="trailing" secondItem="g0M-eO-Bp7" secondAttribute="trailing" id="54K-kc-fdt"/>
+                            <constraint firstItem="g0M-eO-Bp7" firstAttribute="leading" secondItem="nai-kQ-8PT" secondAttribute="leading" id="Mag-Ra-yC7"/>
+                            <constraint firstItem="g0M-eO-Bp7" firstAttribute="top" secondItem="nai-kQ-8PT" secondAttribute="top" id="Y9C-LV-Sft"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="g0M-eO-Bp7" id="dVi-2a-J2A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fyQ-P5-BTD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6054" y="1750"/>
+            <point key="canvasLocation" x="5959" y="2265"/>
         </scene>
         <!--Project View Controller-->
         <scene sceneID="53X-qz-A8X">
@@ -962,7 +1019,7 @@
         <!--공지사항-->
         <scene sceneID="O8m-N7-A9C">
             <objects>
-                <viewController id="V7W-qE-sVO" customClass="NoticeViewController" customModule="sequence" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NoticeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="V7W-qE-sVO" customClass="NoticeViewController" customModule="sequence" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c9e-4w-D5r">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1035,7 +1092,13 @@
                             <constraint firstItem="yJu-Kb-RcV" firstAttribute="leading" secondItem="tZZ-rZ-ICN" secondAttribute="leading" id="pTj-QY-OFI"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="공지사항" id="lgo-sd-1bD"/>
+                    <navigationItem key="navigationItem" title="공지사항" id="lgo-sd-1bD">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="B56-l2-M5f">
+                            <connections>
+                                <segue destination="2P2-EA-E6q" kind="show" id="HSG-pt-Vmd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="noticeTableView" destination="yJu-Kb-RcV" id="24J-ux-q7W"/>
                         <segue destination="Rdt-tD-U11" kind="show" identifier="showNotice" id="YuD-gP-Nsv"/>
@@ -1044,6 +1107,88 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uuM-a0-UJC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5448" y="96"/>
+        </scene>
+        <!--Post Notice View Controller-->
+        <scene sceneID="RzA-hY-h6K">
+            <objects>
+                <viewController id="2P2-EA-E6q" customClass="PostNoticeViewController" customModule="sequence" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GYc-fX-mvs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E4r-Vm-3TA">
+                                <rect key="frame" x="20" y="193" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qfu-99-UgZ">
+                                <rect key="frame" x="20" y="148" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내용" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMg-t6-WFi">
+                                <rect key="frame" x="20" y="267" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qxI-y8-SAY">
+                                <rect key="frame" x="20" y="311" width="374" height="429"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.91372549530000002" green="0.91372549530000002" blue="0.91372549530000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hqn-M9-j5K">
+                                <rect key="frame" x="182.5" y="770" width="49" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="등록"/>
+                                <connections>
+                                    <action selector="onBtnPost:" destination="2P2-EA-E6q" eventType="touchUpInside" id="iq3-YY-bzz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ydB-Hc-QoS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Hqn-M9-j5K" firstAttribute="centerX" secondItem="GYc-fX-mvs" secondAttribute="centerX" id="0IW-sZ-JZx"/>
+                            <constraint firstItem="qxI-y8-SAY" firstAttribute="leading" secondItem="ydB-Hc-QoS" secondAttribute="leading" constant="20" id="2HO-Fp-PDJ"/>
+                            <constraint firstItem="MMg-t6-WFi" firstAttribute="leading" secondItem="ydB-Hc-QoS" secondAttribute="leading" constant="20" id="4dh-Uv-vAj"/>
+                            <constraint firstItem="qxI-y8-SAY" firstAttribute="top" secondItem="MMg-t6-WFi" secondAttribute="bottom" constant="20" id="FRL-PI-TQT"/>
+                            <constraint firstItem="Qfu-99-UgZ" firstAttribute="top" secondItem="ydB-Hc-QoS" secondAttribute="top" constant="60" id="WSc-DF-Hq7"/>
+                            <constraint firstItem="Hqn-M9-j5K" firstAttribute="bottom" secondItem="ydB-Hc-QoS" secondAttribute="bottom" constant="-12" id="bqV-p1-4x4"/>
+                            <constraint firstItem="E4r-Vm-3TA" firstAttribute="leading" secondItem="ydB-Hc-QoS" secondAttribute="leading" constant="20" id="gPj-sG-Q3K"/>
+                            <constraint firstItem="ydB-Hc-QoS" firstAttribute="trailing" secondItem="Qfu-99-UgZ" secondAttribute="trailing" constant="20" id="i2S-r6-RBQ"/>
+                            <constraint firstItem="E4r-Vm-3TA" firstAttribute="top" secondItem="Qfu-99-UgZ" secondAttribute="bottom" constant="15" id="iCt-dT-hKp"/>
+                            <constraint firstItem="ydB-Hc-QoS" firstAttribute="trailing" secondItem="E4r-Vm-3TA" secondAttribute="trailing" constant="20" id="jPo-q4-DHP"/>
+                            <constraint firstItem="Hqn-M9-j5K" firstAttribute="top" secondItem="qxI-y8-SAY" secondAttribute="bottom" constant="30" id="kUz-7N-GNh"/>
+                            <constraint firstItem="Qfu-99-UgZ" firstAttribute="leading" secondItem="ydB-Hc-QoS" secondAttribute="leading" constant="20" id="oAV-zU-64w"/>
+                            <constraint firstItem="MMg-t6-WFi" firstAttribute="top" secondItem="E4r-Vm-3TA" secondAttribute="bottom" constant="40" id="q3y-b9-Gxz"/>
+                            <constraint firstItem="ydB-Hc-QoS" firstAttribute="trailing" secondItem="MMg-t6-WFi" secondAttribute="trailing" constant="20" id="v1h-ID-TbV"/>
+                            <constraint firstItem="ydB-Hc-QoS" firstAttribute="trailing" secondItem="qxI-y8-SAY" secondAttribute="trailing" constant="20" id="yYn-mF-I2y"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jDb-kR-OtM"/>
+                    <connections>
+                        <outlet property="contentTextView" destination="qxI-y8-SAY" id="lyC-pJ-KxE"/>
+                        <outlet property="titleTextField" destination="E4r-Vm-3TA" id="nFY-sk-qOb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p1g-9s-q8S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6286.9565217391309" y="-48.214285714285715"/>
         </scene>
         <!--Show Notice View Controller-->
         <scene sceneID="M9E-eU-BYN">
@@ -1141,7 +1286,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FZl-hd-W87" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6226" y="96"/>
+            <point key="canvasLocation" x="6280" y="619"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8lj-qS-dKf">
@@ -1220,7 +1365,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KNa-Yd-GKj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5643.4782608695659" y="931.47321428571422"/>
+            <point key="canvasLocation" x="4294" y="1381"/>
         </scene>
     </scenes>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1243,6 +1388,9 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

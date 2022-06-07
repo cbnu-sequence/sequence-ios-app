@@ -17,6 +17,7 @@
 		0C3F70D227E0845300BE37EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C3F70D027E0845300BE37EE /* Main.storyboard */; };
 		0C3F70D427E0845300BE37EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C3F70D327E0845300BE37EE /* Assets.xcassets */; };
 		0C3F70D727E0845300BE37EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C3F70D527E0845300BE37EE /* LaunchScreen.storyboard */; };
+		0C9A5293284E294F0029CCCD /* PostNoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A5292284E294F0029CCCD /* PostNoticeViewController.swift */; };
 		0C9F43BA27F5831900A1931C /* CertificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9F43B927F5831900A1931C /* CertificationViewController.swift */; };
 		0CAD18C228321C64008E4265 /* NoticeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD18C128321C64008E4265 /* NoticeTableViewCell.swift */; };
 		0CAD18C628321FCA008E4265 /* Notice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD18C528321FCA008E4265 /* Notice.swift */; };
@@ -50,6 +51,7 @@
 		0C3F70D327E0845300BE37EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C3F70D627E0845300BE37EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C3F70D827E0845300BE37EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C9A5292284E294F0029CCCD /* PostNoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNoticeViewController.swift; sourceTree = "<group>"; };
 		0C9F43B927F5831900A1931C /* CertificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificationViewController.swift; sourceTree = "<group>"; };
 		0CAD18C128321C64008E4265 /* NoticeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeTableViewCell.swift; sourceTree = "<group>"; };
 		0CAD18C528321FCA008E4265 /* Notice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notice.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				0CAD18C128321C64008E4265 /* NoticeTableViewCell.swift */,
 				0C0BCD7C28071DA0002F4745 /* NoticeViewController.swift */,
 				0CE10CA4283779BA00D08F83 /* ShowNoticeViewController.swift */,
+				0C9A5292284E294F0029CCCD /* PostNoticeViewController.swift */,
 				0CAD18C528321FCA008E4265 /* Notice.swift */,
 				0C0BCD7E28071DBC002F4745 /* PomodoroViewController.swift */,
 				0CF5B3D2284749EB009C303A /* RankingPomodoroViewController.swift */,
@@ -272,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C9A5293284E294F0029CCCD /* PostNoticeViewController.swift in Sources */,
 				0C3F70CF27E0845300BE37EE /* ViewController.swift in Sources */,
 				0CF0060428332BDF00E0FDA6 /* ShareInfoViewController.swift in Sources */,
 				0CF5B3CD28474972009C303A /* WeeklyPomodoroViewController.swift in Sources */,

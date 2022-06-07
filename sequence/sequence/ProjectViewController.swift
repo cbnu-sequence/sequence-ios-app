@@ -26,7 +26,7 @@ class ProjectViewController: UIViewController, WKUIDelegate, WKNavigationDelegat
         override func viewDidLoad() {
             super.viewDidLoad()
            
-            let url = URL(string: "\(Config.webviewURL)/board/projects/mobile")
+            let url = URL(string: "\(Config.webviewURL)/board/projects")
             let request = URLRequest(url: url!)
             //self.webView?.allowsBackForwardNavigationGestures = true  //뒤로가기 제스쳐 허용
             webView.configuration.preferences.javaScriptEnabled = true  //자바스크립트 활성화
