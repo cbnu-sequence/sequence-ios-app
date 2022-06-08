@@ -22,7 +22,7 @@ class PomodoroViewController: UIViewController {
     @IBOutlet weak var alertLabel: UILabel!
     var id: String = ""
     
-    var secondsLeft: Int = 10
+    var secondsLeft: Int = 1500
     var timer: Timer?
     
     override func viewDidLoad() {
@@ -62,7 +62,7 @@ class PomodoroViewController: UIViewController {
         }
 
         func updateTimeLeft() {
-            self.secondsLeft = 10
+            self.secondsLeft = 1500
             self.updateTimerLabel()
         }
     
