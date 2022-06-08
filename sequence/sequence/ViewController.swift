@@ -37,7 +37,7 @@ class ViewController: UIViewController {
                 ]
         
     // API 호출
-            let url = "http://localhost:8879/auth/login"
+            let url = "\(Config.appURL)/auth/login"
             let dataRequest = AF.request(url, method: .post, parameters: userdata, encoding: JSONEncoding.default)
             // 서버 응답 처리
             dataRequest.validate().responseData { response in
@@ -77,7 +77,7 @@ class ViewController: UIViewController {
                         "accessToken" : oauthToken!.accessToken
                         ]
  
-                    let url = "http://localhost:8879/auth/kakao/login"
+                    let url = "\(Config.appURL)/auth/kakao/login"
                     let dataRequest = AF.request(url, parameters: kakaoToken, encoder: URLEncodedFormParameterEncoder.default)
                     
                     dataRequest.validate().response { response in

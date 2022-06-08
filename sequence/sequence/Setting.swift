@@ -6,6 +6,7 @@
 
 
 import UIKit
+import Foundation
 
 extension UIView {
     
@@ -38,4 +39,17 @@ extension UIView {
         }
     }
     
+}
+
+
+struct Config {
+    static var appURL: String {
+        (Bundle.main.infoDictionary?["API_URL"] as? String) ?? ""
+    }
+    static var kakaoKey: String {
+        (Bundle.main.infoDictionary?["KAKAO_SDK_KEY"] as? String) ?? ""
+    }
+    static var webviewURL: String{
+        (Bundle.main.infoDictionary?["WEBVIEW_URL"] as? String) ?? ""
+    }
 }

@@ -26,7 +26,7 @@ class ProjectViewController: UIViewController, WKUIDelegate, WKNavigationDelegat
         override func viewDidLoad() {
             super.viewDidLoad()
            
-            let url = URL(string: "http://localhost:3000/board/projects")
+            let url = URL(string: "\(Config.webviewURL)/board/projects")
             let request = URLRequest(url: url!)
             //self.webView?.allowsBackForwardNavigationGestures = true  //뒤로가기 제스쳐 허용
             webView.configuration.preferences.javaScriptEnabled = true  //자바스크립트 활성화
@@ -56,16 +56,5 @@ class ProjectViewController: UIViewController, WKUIDelegate, WKNavigationDelegat
             return nil }
         
     
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

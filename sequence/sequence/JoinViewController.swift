@@ -40,7 +40,7 @@ class JoinViewController: UIViewController {
                 ]
         
                 // API 호출
-                        let url = "http://localhost:8879/auth/register"
+                let url = "\(Config.appURL)/auth/register"
                         let dataRequest = AF.request(url, method: .post, parameters: data, encoding: JSONEncoding.default)
                         // 서버 응답 처리
                         dataRequest.validate().responseData { response in
@@ -72,8 +72,10 @@ class JoinViewController: UIViewController {
                     let kakaoToken = [
                         "accessToken" : oauthToken!.accessToken
                         ]
+                    
+                    let url = "\(Config.appURL)/auth/kakao/login"
+                    
  
-                    let url = "http://localhost:8879/auth/kakao/login"
                     let dataRequest = AF.request(url, parameters: kakaoToken, encoder: URLEncodedFormParameterEncoder.default)
                     
                     dataRequest.validate().response { response in

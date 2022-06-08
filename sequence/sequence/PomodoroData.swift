@@ -13,12 +13,14 @@ struct PomodoroStartData: Codable {
 }
 
 struct PomodoroResponse: Codable {
-    var success: String?
+    var success: Bool?
     var status: Int?
     var message: String?
-    var data: [PomodoroStartData]
+    var data: PomodoroStartData
     
 }
+
+
 
 
 

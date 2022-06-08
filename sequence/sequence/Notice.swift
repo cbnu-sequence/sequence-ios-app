@@ -34,9 +34,11 @@ struct APIResponse: Codable {
     let data: [Notice]
     var status: Int
     var message: String
-    var success: String
+    var success: Bool
     var count: Int
 }
+
+
 
 
 

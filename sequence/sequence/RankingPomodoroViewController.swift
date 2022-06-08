@@ -9,7 +9,7 @@ import UIKit
 import Tabman
 import Pageboy
 
-class RankingPomodoroViewController: TabmanViewController {
+class RankingPomodoroViewController: TabmanViewController, PageboyViewControllerDataSource, TMBarDataSource {
    
     
     
@@ -44,22 +44,6 @@ class RankingPomodoroViewController: TabmanViewController {
         
     }
     
-    func numberOfViewControllers(in pageboyViewController: PageboyViewController) -> Int {
-        return pomodoroVCArr.count
-    }
-    
-    func viewController(for pageboyViewController: PageboyViewController, at index: PageboyViewController.PageIndex) -> UIViewController? {
-        return pomodoroVCArr[index]
-    }
-    
-    func defaultPage(for pageboyViewController: PageboyViewController) -> PageboyViewController.Page? {
-        return nil
-    }
-    
-    
-}
-
-extension RankingPomodoroViewController: PageboyViewControllerDataSource, TMBarDataSource {
     func barItem(for bar: TMBar, at index: Int) -> TMBarItemable {
         switch index {
                 case 0:
@@ -75,16 +59,47 @@ extension RankingPomodoroViewController: PageboyViewControllerDataSource, TMBarD
     }
     
     
-    func numberOfPomodoroViewControllers(in pageboyViewController: PageboyViewController) -> Int {
+    func numberOfViewControllers(in pageboyViewController: PageboyViewController) -> Int {
         return pomodoroVCArr.count
     }
 
-    func PomodoroviewController(for pageboyViewController: PageboyViewController,
-                        at index: PageboyViewController.PageIndex) -> UIViewController? {
+    func viewController(for pageboyViewController: PageboyViewController, at index: PageboyViewController.PageIndex) -> UIViewController? {
         return pomodoroVCArr[index]
     }
 
-    func defaultPomodoroPage(for pageboyViewController: PageboyViewController) -> PageboyViewController.Page? {
+    func defaultPage(for pageboyViewController: PageboyViewController) -> PageboyViewController.Page? {
         return nil
     }
+
+    
 }
+
+//extension RankingPomodoroViewController: TMBarDataSource {
+//    func barItem(for bar: TMBar, at index: Int) -> TMBarItemable {
+//        switch index {
+//                case 0:
+//                    return TMBarItem(title: "일간 랭킹")
+//                case 1:
+//                    return TMBarItem(title: "주간 랭킹")
+//                case 2:
+//                    return TMBarItem(title: "월간 랭킹")
+//                default:
+//                    let title = "Page \(index)"
+//                    return TMBarItem(title: title)
+//                }
+//    }
+//
+//
+//    func numberOfPomodoroViewControllers(in pageboyViewController: PageboyViewController) -> Int {
+//        return pomodoroVCArr.count
+//    }
+//
+//    func PomodoroviewController(for pageboyViewController: PageboyViewController,
+//                        at index: PageboyViewController.PageIndex) -> UIViewController? {
+//        return pomodoroVCArr[index]
+//    }
+//
+//    func defaultPomodoroPage(for pageboyViewController: PageboyViewController) -> PageboyViewController.Page? {
+//        return nil
+//    }
+//}
