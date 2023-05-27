@@ -24,7 +24,6 @@ class WeeklyPomodoroViewController: UIViewController, WKUIDelegate, WKNavigation
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         let url = URL(string: "\(Config.webviewURL)/pomodoro/ranking/mobile")
         let request = URLRequest(url: url!)
         //self.webView?.allowsBackForwardNavigationGestures = true  //뒤로가기 제스쳐 허용
@@ -33,7 +32,6 @@ class WeeklyPomodoroViewController: UIViewController, WKUIDelegate, WKNavigation
     }
     
     override func didReceiveMemoryWarning() { super.didReceiveMemoryWarning() } //모달창 닫힐때 앱 종료현상 방지.
-    
     //alert 처리
     func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String,
                  initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping () -> Void){

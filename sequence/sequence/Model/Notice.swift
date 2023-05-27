@@ -7,15 +7,7 @@
 
 import Foundation
 
-
-
-struct Writer : Codable {
-    var _id: String?
-    var name: String?
-}
-
-struct Notice : Codable {
-
+struct Notice: Codable {
     var _id: String?
     var title: String?
     var category1: String?
@@ -27,7 +19,11 @@ struct Notice : Codable {
     var createdAt: String?
     var updatedAt: String?
     var __v: Int?
+}
 
+struct Writer: Codable {
+    var _id: String?
+    var name: String?
 }
 
 struct APIResponse: Codable {
