@@ -8,7 +8,9 @@ target 'sequence' do
   # Pods for sequence
 
   pod 'Tabman', '~> 2.9'
-  pod 'KakaoSDK', '~> 2.9.0'
- # pod 'NMapsMap', '~>3.10.0'
+  pod 'Alamofire', '~> 5.5'
+  pod 'KakaoSDKCommon' 
+  pod 'KakaoSDKAuth'  
+  pod 'KakaoSDKUser'
 
 end

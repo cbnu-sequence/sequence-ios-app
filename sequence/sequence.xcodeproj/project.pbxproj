@@ -22,14 +22,13 @@
 		0CAD18C228321C64008E4265 /* NoticeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD18C128321C64008E4265 /* NoticeTableViewCell.swift */; };
 		0CAD18C628321FCA008E4265 /* Notice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD18C528321FCA008E4265 /* Notice.swift */; };
 		0CBBBF8927E95A430011BB86 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBBBF8827E95A430011BB86 /* JoinViewController.swift */; };
-		0CD2F5A528463FEE00C47167 /* PomodoroData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD2F5A428463FEE00C47167 /* PomodoroData.swift */; };
+		0CD2F5A528463FEE00C47167 /* Pomodoro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD2F5A428463FEE00C47167 /* Pomodoro.swift */; };
 		0CE10CA5283779BA00D08F83 /* ShowNoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE10CA4283779BA00D08F83 /* ShowNoticeViewController.swift */; };
 		0CEDBB0E284A4E4A007B4679 /* RestTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEDBB0D284A4E4A007B4679 /* RestTimeViewController.swift */; };
 		0CF0060428332BDF00E0FDA6 /* ShareInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0060328332BDF00E0FDA6 /* ShareInfoViewController.swift */; };
 		0CF0060628332BEA00E0FDA6 /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0060528332BEA00E0FDA6 /* ProjectViewController.swift */; };
 		0CF0060C2833793B00E0FDA6 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0060B2833793B00E0FDA6 /* Setting.swift */; };
-		0CF5B3CD28474972009C303A /* WeeklyPomodoroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF5B3CC28474972009C303A /* WeeklyPomodoroViewController.swift */; };
-		0CF5B3D3284749EB009C303A /* RankingPomodoroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF5B3D2284749EB009C303A /* RankingPomodoroViewController.swift */; };
+		0CF5B3CD28474972009C303A /* RankingPomodoroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF5B3CC28474972009C303A /* RankingPomodoroViewController.swift */; };
 		2628520AA8895B4DA4E35F2A /* Pods_sequence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5285C5343FEE6B020B012D1D /* Pods_sequence.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,14 +53,13 @@
 		0CAD18C128321C64008E4265 /* NoticeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeTableViewCell.swift; sourceTree = "<group>"; };
 		0CAD18C528321FCA008E4265 /* Notice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notice.swift; sourceTree = "<group>"; };
 		0CBBBF8827E95A430011BB86 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
-		0CD2F5A428463FEE00C47167 /* PomodoroData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroData.swift; sourceTree = "<group>"; };
+		0CD2F5A428463FEE00C47167 /* Pomodoro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pomodoro.swift; sourceTree = "<group>"; };
 		0CE10CA4283779BA00D08F83 /* ShowNoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowNoticeViewController.swift; sourceTree = "<group>"; };
 		0CEDBB0D284A4E4A007B4679 /* RestTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestTimeViewController.swift; sourceTree = "<group>"; };
 		0CF0060328332BDF00E0FDA6 /* ShareInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareInfoViewController.swift; sourceTree = "<group>"; };
 		0CF0060528332BEA00E0FDA6 /* ProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
 		0CF0060B2833793B00E0FDA6 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
-		0CF5B3CC28474972009C303A /* WeeklyPomodoroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyPomodoroViewController.swift; sourceTree = "<group>"; };
-		0CF5B3D2284749EB009C303A /* RankingPomodoroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingPomodoroViewController.swift; sourceTree = "<group>"; };
+		0CF5B3CC28474972009C303A /* RankingPomodoroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingPomodoroViewController.swift; sourceTree = "<group>"; };
 		5285C5343FEE6B020B012D1D /* Pods_sequence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sequence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C9C3EF3475738122524E0D /* Pods-sequence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sequence.debug.xcconfig"; path = "Target Support Files/Pods-sequence/Pods-sequence.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +88,7 @@
 		0C3F70BE27E0845300BE37EE = {
 			isa = PBXGroup;
 			children = (
+				0C0197F7284B2CA7003F112C /* Config */,
 				0C3F70C927E0845300BE37EE /* sequence */,
 				0C3F70C827E0845300BE37EE /* Products */,
 				EFADBC4CDE24850DC06FE4E5 /* Pods */,
@@ -108,33 +107,55 @@
 		0C3F70C927E0845300BE37EE /* sequence */ = {
 			isa = PBXGroup;
 			children = (
-				0C0197F7284B2CA7003F112C /* Config */,
+				0CE0183D297D464100366A10 /* Controller */,
+				0CE0183C297D462900366A10 /* View */,
+				0CE0183B297D461700366A10 /* Model */,
 				0C3F70CA27E0845300BE37EE /* AppDelegate.swift */,
 				0C3F70CC27E0845300BE37EE /* SceneDelegate.swift */,
-				0C3F70CE27E0845300BE37EE /* ViewController.swift */,
-				0C248F9A27F89520004824EE /* MainPageViewController.swift */,
-				0C3F70D027E0845300BE37EE /* Main.storyboard */,
 				0CF0060B2833793B00E0FDA6 /* Setting.swift */,
-				0CBBBF8827E95A430011BB86 /* JoinViewController.swift */,
-				0C9F43B927F5831900A1931C /* CertificationViewController.swift */,
 				0CAD18C128321C64008E4265 /* NoticeTableViewCell.swift */,
-				0C0BCD7C28071DA0002F4745 /* NoticeViewController.swift */,
-				0CE10CA4283779BA00D08F83 /* ShowNoticeViewController.swift */,
-				0C9A5292284E294F0029CCCD /* PostNoticeViewController.swift */,
-				0CAD18C528321FCA008E4265 /* Notice.swift */,
-				0C0BCD7E28071DBC002F4745 /* PomodoroViewController.swift */,
-				0CF5B3D2284749EB009C303A /* RankingPomodoroViewController.swift */,
-				0CF5B3CC28474972009C303A /* WeeklyPomodoroViewController.swift */,
-				0CEDBB0D284A4E4A007B4679 /* RestTimeViewController.swift */,
-				0CD2F5A428463FEE00C47167 /* PomodoroData.swift */,
-				0C0BCD8028071E14002F4745 /* BoardViewController.swift */,
-				0CF0060328332BDF00E0FDA6 /* ShareInfoViewController.swift */,
-				0CF0060528332BEA00E0FDA6 /* ProjectViewController.swift */,
 				0C3F70D327E0845300BE37EE /* Assets.xcassets */,
 				0C3F70D527E0845300BE37EE /* LaunchScreen.storyboard */,
 				0C3F70D827E0845300BE37EE /* Info.plist */,
 			);
 			path = sequence;
+			sourceTree = "<group>";
+		};
+		0CE0183B297D461700366A10 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0CD2F5A428463FEE00C47167 /* Pomodoro.swift */,
+				0CAD18C528321FCA008E4265 /* Notice.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0CE0183C297D462900366A10 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0C3F70D027E0845300BE37EE /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0CE0183D297D464100366A10 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0CEDBB0D284A4E4A007B4679 /* RestTimeViewController.swift */,
+				0C0BCD8028071E14002F4745 /* BoardViewController.swift */,
+				0CF0060328332BDF00E0FDA6 /* ShareInfoViewController.swift */,
+				0CF0060528332BEA00E0FDA6 /* ProjectViewController.swift */,
+				0C248F9A27F89520004824EE /* MainPageViewController.swift */,
+				0C9A5292284E294F0029CCCD /* PostNoticeViewController.swift */,
+				0CE10CA4283779BA00D08F83 /* ShowNoticeViewController.swift */,
+				0C0BCD7C28071DA0002F4745 /* NoticeViewController.swift */,
+				0CF5B3CC28474972009C303A /* RankingPomodoroViewController.swift */,
+				0C0BCD7E28071DBC002F4745 /* PomodoroViewController.swift */,
+				0C9F43B927F5831900A1931C /* CertificationViewController.swift */,
+				0CBBBF8827E95A430011BB86 /* JoinViewController.swift */,
+				0C3F70CE27E0845300BE37EE /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		E195C05E9CC9DBEF30DFEC9C /* Frameworks */ = {
@@ -272,13 +293,13 @@
 				0C9A5293284E294F0029CCCD /* PostNoticeViewController.swift in Sources */,
 				0C3F70CF27E0845300BE37EE /* ViewController.swift in Sources */,
 				0CF0060428332BDF00E0FDA6 /* ShareInfoViewController.swift in Sources */,
-				0CF5B3CD28474972009C303A /* WeeklyPomodoroViewController.swift in Sources */,
+				0CF5B3CD28474972009C303A /* RankingPomodoroViewController.swift in Sources */,
 				0CEDBB0E284A4E4A007B4679 /* RestTimeViewController.swift in Sources */,
 				0C3F70CB27E0845300BE37EE /* AppDelegate.swift in Sources */,
 				0C9F43BA27F5831900A1931C /* CertificationViewController.swift in Sources */,
 				0CAD18C228321C64008E4265 /* NoticeTableViewCell.swift in Sources */,
 				0C0BCD7F28071DBC002F4745 /* PomodoroViewController.swift in Sources */,
-				0CD2F5A528463FEE00C47167 /* PomodoroData.swift in Sources */,
+				0CD2F5A528463FEE00C47167 /* Pomodoro.swift in Sources */,
 				0CE10CA5283779BA00D08F83 /* ShowNoticeViewController.swift in Sources */,
 				0CF0060C2833793B00E0FDA6 /* Setting.swift in Sources */,
 				0CBBBF8927E95A430011BB86 /* JoinViewController.swift in Sources */,
@@ -287,7 +308,6 @@
 				0CAD18C628321FCA008E4265 /* Notice.swift in Sources */,
 				0C3F70CD27E0845300BE37EE /* SceneDelegate.swift in Sources */,
 				0CF0060628332BEA00E0FDA6 /* ProjectViewController.swift in Sources */,
-				0CF5B3D3284749EB009C303A /* RankingPomodoroViewController.swift in Sources */,
 				0C0BCD8128071E14002F4745 /* BoardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,7 +370,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTABILITY = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -372,6 +392,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Debug;
 		};
@@ -412,6 +433,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -423,10 +445,11 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
+				VALIDATE_PRODUCT = NO;
 			};
 			name = Release;
 		};
@@ -444,8 +467,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -473,8 +496,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -498,7 +521,7 @@
 				0C3F70DA27E0845300BE37EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
 		0C3F70DB27E0845300BE37EE /* Build configuration list for PBXNativeTarget "sequence" */ = {
 			isa = XCConfigurationList;
@@ -507,7 +530,7 @@
 				0C3F70DD27E0845300BE37EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

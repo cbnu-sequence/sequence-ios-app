@@ -4,10 +4,7 @@ import Alamofire
 import KakaoSDKCommon
 import KakaoSDKUser
 
-
-
 class JoinViewController: UIViewController {
-    
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
@@ -25,10 +22,13 @@ class JoinViewController: UIViewController {
         PhoneNumTextField.delegate = self
         passwordTextField.delegate = self
         pwcheckTextField.delegate = self
-        
         pwcheckLabel.text = ""
         
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            self.view.endEditing(true)
+        }
     
     @IBAction func onBtnJoin(_ sender: Any) {
         
@@ -57,7 +57,6 @@ class JoinViewController: UIViewController {
                                 }
     
         }
-
     
     @IBAction func onBtnKakaoLogin(_ sender: UIButton) {
         
@@ -66,16 +65,12 @@ class JoinViewController: UIViewController {
                     print(error)
                 }
                 else {
-
                     _ = oauthToken
-                    
                     let kakaoToken = [
                         "accessToken" : oauthToken!.accessToken
                         ]
                     
                     let url = "\(Config.appURL)/auth/kakao/login"
-                    
- 
                     let dataRequest = AF.request(url, parameters: kakaoToken, encoder: URLEncodedFormParameterEncoder.default)
                     
                     dataRequest.validate().response { response in
@@ -92,7 +87,6 @@ class JoinViewController: UIViewController {
                             mainpageView?.modalPresentationStyle = .fullScreen //전체화면으로 보이게 설정
                             mainpageView?.modalTransitionStyle = .crossDissolve //전환 애니메이션 설정
                                     self.present(mainpageView!, animated: true, completion: nil)
-
                         }
                     }
                 }
@@ -123,12 +117,6 @@ class JoinViewController: UIViewController {
         }
 }
     
-    
-
-    
-
-    
-
 extension JoinViewController: UITextFieldDelegate {
     
     func setLabelPasswordConfirm(_ password: String, _ passwordCheck: String)  {
